@@ -1,5 +1,6 @@
 package com.backend.velyo_backend.Dto.ReviewDTO;
 
+import com.backend.velyo_backend.Dto.UserDTO.UserSummaryDTO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,5 +19,6 @@ public class ReviewSummaryDTO {
     private Integer rating;
     private String comment;
     private LocalDateTime reviewDate;
+    private UserSummaryDTO user;
 
 }

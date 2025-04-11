@@ -25,6 +25,6 @@ public class AccommodationSummaryDTO implements Serializable {
     private Double price;
     private Set <String> images;
     private AddressDTO address;
-    private Double rating;
+    private Double avgRating;
     private Integer totalReviews;
 }

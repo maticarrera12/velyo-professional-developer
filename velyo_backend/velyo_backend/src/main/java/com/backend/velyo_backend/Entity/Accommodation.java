@@ -55,7 +55,7 @@ public class Accommodation {
 
     @Column(columnDefinition = "DOUBLE DEFAULT 0.0")
     @PositiveOrZero(message = "El rating debe ser 0 o positivo")
-    private Double rating = 0.0;
+    private Double avgRating = 0.0;
 
     @NotNull(message = "Policies cannot be null")
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)

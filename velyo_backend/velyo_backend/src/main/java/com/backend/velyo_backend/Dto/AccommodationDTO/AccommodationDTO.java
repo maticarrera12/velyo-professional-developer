@@ -33,7 +33,7 @@ public class AccommodationDTO implements Serializable {
     private Double Price;
     private UUID category_id;
     private AddressDTO address;
-    private Double rating;
+    private Double avgRating;
     private Set<AccommodationPolicy> policies;
     private Set<LocalDate>  unavailableDates;
     private Set<ReviewSummaryDTO> reviews;
