@@ -12,6 +12,8 @@ public class VelyoBackendApplication {
 		System.setProperty("DATABASE_URL", dotenv.get("DATABASE_URL"));
 		System.setProperty("DATABASE_USER", dotenv.get("DATABASE_USER"));
 		System.setProperty("DATABASE_PASSWORD", dotenv.get("DATABASE_PASSWORD"));
+		System.setProperty("MAIL_USERNAME", dotenv.get("MAIL_USERNAME"));
+		System.setProperty("MAIL_PASSWORD", dotenv.get("MAIL_PASSWORD"));
 		SpringApplication.run(VelyoBackendApplication.class, args);
 	}
 }

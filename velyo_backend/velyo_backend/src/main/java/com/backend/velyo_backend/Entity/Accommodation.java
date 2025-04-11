@@ -27,7 +27,7 @@ public class Accommodation {
     @NotNull(message = "El nombre no puede ser nulo")
     private String name;
 
-    @NotNull(message = "Las iamgenes no pueden ser nulas")
+    @NotNull(message = "Las imagenes no pueden ser nulas")
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<AccommodationImage> images;
 

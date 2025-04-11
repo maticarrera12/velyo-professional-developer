@@ -22,7 +22,7 @@ public class User implements UserDetails {
     @GeneratedValue(generator = "UUID")
     private UUID id;
 
-    private String firsName;
+    private String firstName;
 
     private String lastName;
 

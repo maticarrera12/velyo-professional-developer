@@ -5,26 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f133e91-d5d8-4e7d-89e1-e5353413f1d4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Mapper/AccommodationMapper/AccommodationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Mapper/AccommodationMapper/AccommodationSummaryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Mapper/AmenityMapper/AmenityMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Mapper/BookingMapper/BookingCreateMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Mapper/BookingMapper/BookingMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Mapper/CategoryMapper/CategoryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Mapper/ReviewMapper/ReviewCreateMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Mapper/ReviewMapper/ReviewSummaryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Mapper/UserMapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Mapper/UserMapper/UserSaveMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Mapper/UserMapper/UserSummaryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Configuration/EmailConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Repository/AccommodationImageRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Repository/AccommodationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Repository/AmenityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Repository/BookingRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Repository/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Repository/ReviewInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Security/Configuration/ApplicationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Security/Configuration/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Security/Configuration/SecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Security/Controller/AuthenticationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Security/DTO/AuthenticationRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Security/DTO/AuthenticationResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Security/DTO/RegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Security/Service/AuthenticationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Security/Service/JwtService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/service/EmailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/Velyo-2025-04-10.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/Velyo-2025-04-10.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velyo_backend/velyo_backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Dto/AccommodationDTO/AccommodationDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Dto/AccommodationDTO/AccommodationDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Dto/AccommodationDTO/AccommodationSummaryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Dto/AccommodationDTO/AccommodationSummaryDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Dto/ReviewDTO/ReviewSummaryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Dto/ReviewDTO/ReviewSummaryDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Entity/Accommodation.java" beforeDir="false" afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Entity/Accommodation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Entity/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Entity/Review.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/Entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/VelyoBackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/java/com/backend/velyo_backend/VelyoBackendApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/resources/.env" beforeDir="false" afterPath="$PROJECT_DIR$/velyo_backend/velyo_backend/src/main/resources/.env" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,15 +61,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.VelyoBackendApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.VelyoBackendApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend\velyo_backend\src\main\resources" />
