@@ -23,7 +23,7 @@ public interface IAccommodationService {
 
     Page<AccommodationDTO> findAll(Pageable pageable);
 
-    Set<AccommodationSummaryDTO> getRandoStays(int size);
+    Set<AccommodationSummaryDTO> getRandomAccommodations(int size);
 
     void update(AccommodationSaveDTO accommodationDTO, MultipartFile[] images, Set<String> imagesToDelete) throws IOException;
 

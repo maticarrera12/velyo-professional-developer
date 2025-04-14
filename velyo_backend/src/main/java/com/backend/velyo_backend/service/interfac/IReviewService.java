@@ -11,7 +11,7 @@ public interface IReviewService {
 
     Page<ReviewSummaryDTO> findAll(Pageable pageable);
 
-    Page<ReviewSummaryDTO> findByStay(Pageable pageable, UUID id);
+    Page<ReviewSummaryDTO> findByAccommodation(Pageable pageable, UUID id);
 
     ReviewSummaryDTO save(ReviewCreateDTO reviewCreateDTO, String email);
 }
