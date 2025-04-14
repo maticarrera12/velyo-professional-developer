@@ -20,7 +20,7 @@ public interface IUserService {
 
     UserDTO updateByAdmin(UserSaveDTO userSaveDTO);
 
-    UserDTO addFavorite(UserFavoriteDTO userFavoriteDTO);
+    UserDTO addFavorite(UserFavoriteDTO userFavoritesDTO);
 
-    UserDTO removeFavorite(UserFavoriteDTO userFavoriteDTO);
+    UserDTO removeFavorite(UserFavoriteDTO userFavoritesDTO);
 }

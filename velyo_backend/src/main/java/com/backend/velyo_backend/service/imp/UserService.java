@@ -3,8 +3,15 @@ package com.backend.velyo_backend.service.imp;
 import com.backend.velyo_backend.Dto.UserDTO.UserDTO;
 import com.backend.velyo_backend.Dto.UserDTO.UserFavoriteDTO;
 import com.backend.velyo_backend.Dto.UserDTO.UserSaveDTO;
+import com.backend.velyo_backend.Dto.UserDTO.UserUpdateNameDTO;
+import com.backend.velyo_backend.Entity.Accommodation;
+import com.backend.velyo_backend.Entity.User;
+import com.backend.velyo_backend.Exception.ResourceAlreadyExistsException;
+import com.backend.velyo_backend.Exception.ResourceNotFoundException;
+import com.backend.velyo_backend.Mapper.UserMapper.UserMapper;
 import com.backend.velyo_backend.Repository.*;
 import com.backend.velyo_backend.Util.BaseUrl;
+import com.backend.velyo_backend.Util.DashboardResponse;
 import com.backend.velyo_backend.service.interfac.IUserService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.data.domain.Page;
@@ -13,6 +20,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Log4j2
 @Service
@@ -37,36 +45,143 @@ public class UserService implements IUserService, BaseUrl {
 
     @Override
     public UserDTO findById(UUID id) {
-        return null;
+        log.debug("Buscando usuario por id: {}id", id);
+        return userRepository.findById(id)
+                .map(UserMapper.INSTANCE::entityToDto)
+                .orElseThrow(()->{
+                    log.error("El usuario con id: {} no fue encontrado", id);
+                    return new ResourceNotFoundException("El usuario con id: " + id + " no fue encontrado");
+                });
     }
 
     @Override
     public UserDTO findByEmail(String email) {
-        return null;
+        log.debug("Buscando usuario por email: {}", email);
+        UserDTO userDTO = userRepository.findByEmail(email)
+                .map(UserMapper.INSTANCE::entityToDto)
+                .orElseThrow(()->{
+                    log.error("El usuario con email: {} no fue encontrado", email);
+                    return new ResourceNotFoundException("El usuario con email " + email + " no fue encontrado");
+                });
+        userDTO.getFavorites().forEach(favoriteAccommodation -> favoriteAccommodation.setImages(favoriteAccommodation.getImages().stream()
+                .map(image -> getBaseUrl() + "/api/accommodations/images/" + image)
+                .collect(Collectors.toSet())));
+        return userDTO;
     }
 
     @Override
     public Page<UserDTO> findAll(Pageable pageable) {
-        return null;
+        log.debug("Buscando todos los usuarios paginados: {}", pageable);
+        Page<UserDTO> pageUsers = userRepository.findAll(pageable).map(UserMapper.INSTANCE::entityToDto);
+        log.info("Encontrados {} usuarios", pageUsers.getTotalElements());
+        return pageUsers;
     }
 
     @Override
     public void delete(UUID id) {
-
+        log.debug("Borrando el usuario: {}", id);
+        User userToDelete = userRepository.findById(id).orElseThrow(()->{
+            log.error("El usuario con id: {} no fue encontrado", id);
+            return new ResourceNotFoundException("El usuario con id: " + id + " no fue encontrado");
+        });
+        userRepository.delete(userToDelete);
+        log.info("El usuario ha sido borrado: {}", userToDelete.getEmail());
     }
 
     @Override
     public UserDTO updateByAdmin(UserSaveDTO userSaveDTO) {
-        return null;
+        log.debug("Actualizando usuario por admin: {}", userSaveDTO.getId());
+        System.out.println("userSaveDTO.getId() = " + userSaveDTO.getId());
+
+        User userToUpdate = userRepository.findById(userSaveDTO.getId()).orElseThrow(()->{
+            log.error("El usuario con id: {} no fue encontrado", userSaveDTO.getId());
+            return new ResourceNotFoundException("El usuario con id: " + userSaveDTO.getId() + " no fue encontrado");
+        });
+
+        if (!userToUpdate.getEmail().equals(userSaveDTO.getEmail())
+        && userRepository.existsByEmail(userSaveDTO.getEmail())){
+            log.error("El usuario con email: {} ya existe", userSaveDTO.getEmail());
+            throw new ResourceAlreadyExistsException("El usuario con email: " + userSaveDTO.getEmail() + " ya existe");
+        }
+
+        userToUpdate.setFirstName(userSaveDTO.getFirstName());
+        userToUpdate.setLastName(userSaveDTO.getLastName());
+        userToUpdate.setEmail(userSaveDTO.getEmail());
+        userToUpdate.setRole(userSaveDTO.getRole());
+
+        if (userSaveDTO.getPassword() != null && !userSaveDTO.getPassword().isEmpty()){
+            userToUpdate.setPassword(passwordEncoder.encode(userSaveDTO.getPassword()));
+        }
+
+        userRepository.save(userToUpdate);
+        log.info("El usuario fue actualizado: {}", userToUpdate.getEmail());
+        return UserMapper.INSTANCE.entityToDto(userToUpdate);
     }
 
     @Override
-    public UserDTO addFavorite(UserFavoriteDTO userFavoriteDTO) {
-        return null;
+    public UserDTO addFavorite(UserFavoriteDTO userFavoritesDTO) {
+        log.info("Agregando a favoritos para el usuario con id: {}", userFavoritesDTO.getId());
+        User user  = userRepository.findById(userFavoritesDTO.getId()).orElseThrow(()->{
+            log.error("El usuario con id: {} no fue encontrado", userFavoritesDTO.getFavorite());
+            return new ResourceNotFoundException("El usuario con id: {}" + userFavoritesDTO.getId() + " no fue encontrado");
+        });
+        Accommodation accommodation = accommodationRepository.findById(userFavoritesDTO.getFavorite()).orElseThrow(()->{
+            log.error("El alojaminento con id: {}", userFavoritesDTO.getFavorite());
+            return new ResourceNotFoundException("El alojamiento con id: " + userFavoritesDTO.getFavorite() + " no fue encontrado");
+        });
+
+        user.getFavorites().add(accommodation);
+        userRepository.save(user);
+        log.info("Favorito agregado al usuario con id: {}", userFavoritesDTO.getId());
+        UserDTO userDTO = UserMapper.INSTANCE.entityToDto(user);
+        userDTO.getFavorites().forEach(favoriteAccommodation -> favoriteAccommodation.setImages(favoriteAccommodation.getImages().stream()
+                .map(image-> getBaseUrl() + "/api/accommodations/images/" + image)
+                .collect(Collectors.toSet())));
+        return userDTO;
     }
 
     @Override
-    public UserDTO removeFavorite(UserFavoriteDTO userFavoriteDTO) {
-        return null;
+    public UserDTO removeFavorite(UserFavoriteDTO userFavoritesDTO) {
+        log.error("El usuario con id: {} no fue encontrado", userFavoritesDTO.getId());
+        User user = userRepository.findById(userFavoritesDTO.getId()).orElseThrow(()->{
+            log.error("El usuario con id: {} no fue encontrado", userFavoritesDTO.getId());
+            return  new ResourceNotFoundException("El usuario con id: " + userFavoritesDTO.getId() + " no fue encontrado");
+        });
+
+        Accommodation accommodation = accommodationRepository.findById(userFavoritesDTO.getFavorite()).orElseThrow(()->{
+            log.error("El alojamiento con id: {} no fue encontrado", userFavoritesDTO.getFavorite());
+            return new ResourceNotFoundException("El alojamiento con id: " + userFavoritesDTO.getFavorite() + " no fue encontrado");
+        });
+        user.getFavorites().remove(accommodation);
+        userRepository.save(user);
+        log.info("Favorito removido del usuario con id: {}", userFavoritesDTO.getId());
+        UserDTO userDTO = UserMapper.INSTANCE.entityToDto(user);
+        userDTO.getFavorites().forEach(favoriteAccommodation -> favoriteAccommodation.setImages(favoriteAccommodation.getImages().stream()
+                .map(image -> getBaseUrl() + "/api/accommodations/images/" + image).collect(Collectors.toSet())));
+        return userDTO;
+    }
+
+    public UserDTO updateName(UserUpdateNameDTO userUpdateNameDTO, String email){
+        log.debug("Actualizando el nombre del usuario con el email: {}", email);
+        User userToUpdate = userRepository.findByEmail(email).orElseThrow(()->{
+            log.error("El usuario con email: {} no fue encontrado", email);
+            return new ResourceNotFoundException("El usuario con email: " + email + " no fue encontrado");
+        });
+        userToUpdate.setFirstName(userUpdateNameDTO.getFirstName());
+        userToUpdate.setLastName(userUpdateNameDTO.getLastName());
+        userRepository.save(userToUpdate);
+        log.info("El nombre del usuario con email: {} fue actualizado", email);
+        return UserMapper.INSTANCE.entityToDto(userToUpdate);
+    }
+
+    public DashboardResponse getDashboardInfo(){
+        log.debug("Obteniendo informacion del dashboard");
+        int totalUsers = userRepository.findAll().size();
+        int totalAccommodations = accommodationRepository.findAll().size();
+        int totalAmenities = amenityRepository.findAll().size();
+        int totalCategories = categoryRepository.findAll().size();
+        int totalBookings = bookingRepository.findAll().size();
+        log.info("Devolviendo informacion del dashboard");
+        return  new DashboardResponse(totalUsers, totalAccommodations, totalAmenities, totalCategories, totalBookings);
     }
 }

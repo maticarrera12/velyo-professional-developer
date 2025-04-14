@@ -33,7 +33,7 @@ public class Accommodation {
 
     @ManyToMany(cascade = {CascadeType.MERGE, CascadeType.DETACH})
     @JoinTable(
-            name="accommodation_amenitie",
+            name="accommodation_amenity",
             joinColumns = @JoinColumn(name="accommodation_id"),
             inverseJoinColumns = @JoinColumn(name = "amenity_id")
     )

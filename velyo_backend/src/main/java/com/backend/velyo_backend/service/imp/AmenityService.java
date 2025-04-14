@@ -128,7 +128,7 @@ public class AmenityService implements IAmenityService, BaseUrl {
         log.debug("Borrando aenity con id: {}", id);
         Amenity amenityToDelete = amenityRepository.findById(id).orElseThrow(()->{
             log.error("La amenity con id: {} no fue encontrada", id);
-            return new ResourceNotFoundException("La amenitie con id: " + id + " no fue encontrada");
+            return new ResourceNotFoundException("La amenity con id: " + id + " no fue encontrada");
         });
 
         accommodationRepository.findByAmenityIds(Set.of(id)).forEach(accommodation -> {
