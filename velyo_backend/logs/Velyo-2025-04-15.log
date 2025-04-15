@@ -1,0 +1,88 @@
+2025-04-15 00:00:27.628 DEBUG 14996 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-04-15 00:00:27.632 DEBUG 14996 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-04-15 00:00:57.646 DEBUG 14996 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-04-15 00:00:57.646 DEBUG 14996 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-04-15 00:01:06.134 DEBUG 14996 --- [nio-8080-exec-7] org.apache.coyote.http11.Http11Processor : Error parsing HTTP request header
+
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1295) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1183) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11InputBuffer.fill(Http11InputBuffer.java:795) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:351) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at java.base/java.lang.Thread.run(Thread.java:1570) [?:?]
+
+2025-04-15 00:01:06.135 DEBUG 14996 --- [nio-8080-exec-7] org.apache.coyote.http11.Http11Processor : Error state [CLOSE_CONNECTION_NOW] reported while processing request
+
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1295) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1183) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11InputBuffer.fill(Http11InputBuffer.java:795) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:351) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.39.jar:10.1.39]
+	at java.base/java.lang.Thread.run(Thread.java:1570) [?:?]
+
+2025-04-15 00:01:06.136 DEBUG 14996 --- [nio-8080-exec-8] org.springframework.security.web.FilterChainProxy : Securing POST /api/categories
+2025-04-15 00:01:06.137  INFO 14996 --- [nio-8080-exec-8] com.backend.velyo_backend.Security.Configuration.JwtAuthenticationFilter : Validando el token JWT para el usuario: mcarreradev123@gmail.com
+2025-04-15 00:01:06.137 DEBUG 14996 --- [nio-8080-exec-8] org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2025-04-15 00:01:06.138 DEBUG 14996 --- [nio-8080-exec-8] org.hibernate.orm.sql.ast.create : Created new SQL alias : u1_0
+2025-04-15 00:01:06.138 DEBUG 14996 --- [nio-8080-exec-8] org.hibernate.orm.sql.ast.create : Registration of TableGroup [StandardTableGroup(com.backend.velyo_backend.Entity.User(4))] with identifierForTableGroup [com.backend.velyo_backend.Entity.User] for NavigablePath [com.backend.velyo_backend.Entity.User] 
+2025-04-15 00:01:06.138 DEBUG 14996 --- [nio-8080-exec-8] org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter : Determining mapping-model type for SqmParameter : org.hibernate.query.sqm.tree.expression.SqmJpaCriteriaParameterWrapper@658fffa7
+2025-04-15 00:01:06.138 DEBUG 14996 --- [nio-8080-exec-8] org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter : Determining mapping-model type for SqmPath : SqmBasicValuedSimplePath(com.backend.velyo_backend.Entity.User(4).email) 
+2025-04-15 00:01:06.139 DEBUG 14996 --- [nio-8080-exec-8] org.hibernate.orm.results.graph.AST : DomainResult Graph:
+ \-EntityResultImpl [com.backend.velyo_backend.Entity.User(4)]
+ |  +-BasicFetch [com.backend.velyo_backend.Entity.User(4).email]
+ |  +-DelayedCollectionFetch [com.backend.velyo_backend.Entity.User(4).favorites]
+ |  +-BasicFetch [com.backend.velyo_backend.Entity.User(4).firstName]
+ |  +-BasicFetch [com.backend.velyo_backend.Entity.User(4).lastName]
+ |  +-BasicFetch [com.backend.velyo_backend.Entity.User(4).password]
+ |  +-DelayedCollectionFetch [com.backend.velyo_backend.Entity.User(4).reviews]
+ |  \-BasicFetch [com.backend.velyo_backend.Entity.User(4).role]
+
+2025-04-15 00:01:06.139 DEBUG 14996 --- [nio-8080-exec-8] org.hibernate.orm.sql.ast.tree : SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (u1 : com.backend.velyo_backend.Entity.User(4)) {
+          primaryTableReference : users as u1_0
+        }
+      }
+    }
+
+2025-04-15 00:01:06.139 DEBUG 14996 --- [nio-8080-exec-8] org.hibernate.orm.sql.exec : Skipping reading Query result cache data: cache-enabled = false, cache-mode = NORMAL
+2025-04-15 00:01:06.139 DEBUG 14996 --- [nio-8080-exec-8] org.hibernate.SQL : select u1_0.id,u1_0.email,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+2025-04-15 00:01:06.140 DEBUG 14996 --- [nio-8080-exec-8] org.hibernate.orm.results : Initializer list:
+	  com.backend.velyo_backend.Entity.User(4).favorites -> DelayedCollectionInitializer(com.backend.velyo_backend.Entity.User(4).favorites)@454377259 (PluralAttribute(com.backend.velyo_backend.Entity.User.favorites))
+	  com.backend.velyo_backend.Entity.User(4) -> EntityJoinedFetchInitializer(com.backend.velyo_backend.Entity.User(4))@1209520562 (SingleTableEntityPersister(com.backend.velyo_backend.Entity.User))
+	  com.backend.velyo_backend.Entity.User(4).reviews -> DelayedCollectionInitializer(com.backend.velyo_backend.Entity.User(4).reviews)@1247471634 (PluralAttribute(com.backend.velyo_backend.Entity.User.reviews))
+
+2025-04-15 00:01:06.142 DEBUG 14996 --- [nio-8080-exec-8] org.springframework.security.web.FilterChainProxy : Secured POST /api/categories
+2025-04-15 00:01:06.142 DEBUG 14996 --- [nio-8080-exec-8] org.springframework.web.servlet.DispatcherServlet : POST "/api/categories", parameters={multipart}
+2025-04-15 00:01:06.150 DEBUG 14996 --- [nio-8080-exec-8] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping : Mapped to com.backend.velyo_backend.Controller.CategoryController#createCategory(CategoryDTO, MultipartFile)
+2025-04-15 00:01:06.150 DEBUG 14996 --- [nio-8080-exec-8] org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-04-15 00:01:06.150 DEBUG 14996 --- [nio-8080-exec-8] org.springframework.web.method.HandlerMethod : Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<com.backend.velyo_backend.Dto.CategoryDTO.CategoryDTO> com.backend.velyo_backend.Controller.CategoryController.createCategory(com.backend.velyo_backend.Dto.CategoryDTO.CategoryDTO,org.springframework.web.multipart.MultipartFile) throws java.io.IOException,java.lang.IllegalArgumentException: Required part 'category' is not present.
+2025-04-15 00:01:06.151  WARN 14996 --- [nio-8080-exec-8] org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'category' is not present.]
+2025-04-15 00:01:06.151 DEBUG 14996 --- [nio-8080-exec-8] org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-04-15 00:01:06.152 DEBUG 14996 --- [nio-8080-exec-8] org.springframework.web.servlet.DispatcherServlet : Completed 400 BAD_REQUEST
+2025-04-15 00:01:06.153 DEBUG 14996 --- [nio-8080-exec-8] org.springframework.security.web.FilterChainProxy : Securing POST /error
+2025-04-15 00:01:06.153 DEBUG 14996 --- [nio-8080-exec-8] org.springframework.security.web.authentication.AnonymousAuthenticationFilter : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-15 00:01:06.153 DEBUG 14996 --- [nio-8080-exec-8] org.springframework.security.web.authentication.Http403ForbiddenEntryPoint : Pre-authenticated entry point called. Rejecting access
+2025-04-15 00:01:27.661 DEBUG 14996 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-04-15 00:01:27.661 DEBUG 14996 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-04-15 00:01:57.663 DEBUG 14996 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-04-15 00:01:57.663 DEBUG 14996 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-04-15 00:02:27.666 DEBUG 14996 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-04-15 00:02:27.666 DEBUG 14996 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.

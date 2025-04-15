@@ -39,7 +39,7 @@ public class AuthenticationService implements BaseUrl {
                 .lastName(request.getLastName())
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))
-                .role(Role.USER)
+                .role(Role.ADMIN)
                 .build();
         if(userRepository.existsByEmail(user.getEmail())){
             throw new ResourceAlreadyExistsException("El Mail ya esta registrado");
@@ -53,8 +53,10 @@ public class AuthenticationService implements BaseUrl {
         }
 
         var jwt = jwtService.generateToken(user);
+        UserDTO userDTO = UserMapper.INSTANCE.entityToDto(user);
         return AuthenticationResponse.builder()
                 .token(jwt)
+                .user(userDTO)
                 .build();
     }
     public AuthenticationResponse login(AuthenticationRequest request){

@@ -11,6 +11,7 @@ import org.mapstruct.Mapping;
 import org.mapstruct.Named;
 import org.mapstruct.factory.Mappers;
 
+import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -23,6 +24,10 @@ public interface UserMapper {
 
     @Named("mapAccommodationsToAccommodationsDTOs")
     default Set<AccommodationSummaryDTO> mapAccommodationsToAccommodationsDTOs(Set<Accommodation> accommodations){
+        if (accommodations == null) {
+            return new HashSet<>();
+        }
+
         return accommodations.stream()
                 .map(AccommodationSummaryMapper.INSTANCE::entityToDto)
                 .collect(Collectors.toSet());
