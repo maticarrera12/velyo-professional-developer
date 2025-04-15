@@ -9,6 +9,7 @@ import com.backend.velyo_backend.Entity.User;
 import com.backend.velyo_backend.Exception.ResourceAlreadyExistsException;
 import com.backend.velyo_backend.Exception.ResourceNotFoundException;
 import com.backend.velyo_backend.Mapper.UserMapper.UserMapper;
+import com.backend.velyo_backend.Mapper.UserMapper.UserSaveMapper;
 import com.backend.velyo_backend.Repository.*;
 import com.backend.velyo_backend.Util.BaseUrl;
 import com.backend.velyo_backend.Util.DashboardResponse;
@@ -77,6 +78,21 @@ public class UserService implements IUserService, BaseUrl {
         return pageUsers;
     }
 
+    public void save(UserSaveDTO userSaveDTO){
+        log.debug("Agregando usuario: {}", userSaveDTO.getEmail());
+
+        if (userRepository.existsByEmail(userSaveDTO.getEmail())){
+            log.error("El usuario con email :{} ya existe", userSaveDTO.getEmail());
+            throw new ResourceAlreadyExistsException("El usuario con email" + userSaveDTO.getEmail() + " ya existe");
+        }
+
+        User user = UserSaveMapper.INSTANCE.dtoToEntity(userSaveDTO);
+        user.setPassword(passwordEncoder.encode(userSaveDTO.getPassword()));
+        userRepository.save(user);
+        log.info("Usuario agregado: {}", user.getEmail());
+
+    }
+
     @Override
     public void delete(UUID id) {
         log.debug("Borrando el usuario: {}", id);
@@ -104,8 +120,8 @@ public class UserService implements IUserService, BaseUrl {
             throw new ResourceAlreadyExistsException("El usuario con email: " + userSaveDTO.getEmail() + " ya existe");
         }
 
-        userToUpdate.setFirstName(userSaveDTO.getFirstName());
-        userToUpdate.setLastName(userSaveDTO.getLastName());
+        userToUpdate.setFirstname(userSaveDTO.getFirstname());
+        userToUpdate.setLastname(userSaveDTO.getLastname());
         userToUpdate.setEmail(userSaveDTO.getEmail());
         userToUpdate.setRole(userSaveDTO.getRole());
 
@@ -167,8 +183,8 @@ public class UserService implements IUserService, BaseUrl {
             log.error("El usuario con email: {} no fue encontrado", email);
             return new ResourceNotFoundException("El usuario con email: " + email + " no fue encontrado");
         });
-        userToUpdate.setFirstName(userUpdateNameDTO.getFirstName());
-        userToUpdate.setLastName(userUpdateNameDTO.getLastName());
+        userToUpdate.setFirstname(userUpdateNameDTO.getFirstname());
+        userToUpdate.setLastname(userUpdateNameDTO.getLastname());
         userRepository.save(userToUpdate);
         log.info("El nombre del usuario con email: {} fue actualizado", email);
         return UserMapper.INSTANCE.entityToDto(userToUpdate);

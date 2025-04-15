@@ -17,8 +17,8 @@ import java.util.UUID;
 @Builder
 public class UserDTO {
     private UUID id;
-    private String firstName;
-    private String lastName;
+    private String firstname;
+    private String lastname;
     private String email;
     private Role role;
     private Set<AccommodationSummaryDTO> favorites;

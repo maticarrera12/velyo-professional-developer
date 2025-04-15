@@ -14,8 +14,8 @@ import java.util.UUID;
 @Data
 public class UserSaveDTO {
     private UUID id;
-    private String firstName;
-    private String lastName;
+    private String firstname;
+    private String lastname;
     private String email;
     private Role role;
     private String password;

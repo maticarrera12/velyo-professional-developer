@@ -112,7 +112,7 @@ public class BookingService implements IBookingService, BaseUrl {
     }
 
     @Override
-    public BookingDTO confirmReservation(UUID id, String email) throws ResourceNotFoundException {
+    public BookingDTO confirmBooking(UUID id, String email) throws ResourceNotFoundException {
         log.debug("Confirmando reserva con id: {}", id);
         Booking booking = bookingRepository.findById(id).orElseThrow(()->{
             log.error("La reserva con id: {} no fue encontrada", id);
@@ -131,7 +131,7 @@ public class BookingService implements IBookingService, BaseUrl {
         bookingRepository.save(booking);
         log.info("Reserca confirmada: {}", id);
         try {
-            emailService.sendConfirmationEmail(booking.getUser().getFirstName(), booking.getUser().getLastName(), booking.getUser().getEmail());
+            emailService.sendConfirmationEmail(booking.getUser().getFirstname(), booking.getUser().getLastname(), booking.getUser().getEmail());
         }catch (Exception e){
             log.error("Error enviando el mail: {}", e.getMessage());
         }

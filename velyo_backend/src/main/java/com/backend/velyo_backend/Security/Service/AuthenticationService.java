@@ -35,8 +35,8 @@ public class AuthenticationService implements BaseUrl {
 
     public AuthenticationResponse register(RegisterRequest request){
         var user = User.builder()
-                .firstName(request.getFirstName())
-                .lastName(request.getLastName())
+                .firstname(request.getFirstname())
+                .lastname(request.getLastname())
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))
                 .role(Role.ADMIN)
@@ -47,7 +47,7 @@ public class AuthenticationService implements BaseUrl {
 
         userRepository.save(user);
         try{
-            emailService.sendConfirmationEmail(user.getFirstName(), user.getLastName(), user.getEmail());
+            emailService.sendConfirmationEmail(user.getFirstname(), user.getLastname(), user.getEmail());
         }catch (Exception e){
             log.error("Error enviando el mail: {}", e.getMessage());
         }

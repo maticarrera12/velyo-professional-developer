@@ -22,5 +22,5 @@ public interface IBookingService {
 
     List<BookingDTO> getReservationByUser(String email, LocalDate date);
 
-    BookingDTO confirmReservation(UUID id, String email) throws ResourceNotFoundException;
+    BookingDTO confirmBooking(UUID id, String email) throws ResourceNotFoundException;
 }

@@ -14,11 +14,11 @@ public class EmailService {
         this.mailSender = mailSender;
     }
 
-    public void sendConfirmationEmail(String firstName, String lastName, String email) {
+    public void sendConfirmationEmail(String firstname, String lastname, String email) {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setTo(email);
         message.setSubject("¡Bienvenido a Velyo!");
-        message.setText("Hola " + firstName + " " + lastName + ",\n\n" +
+        message.setText("Hola " + firstname + " " + lastname + ",\n\n" +
                 "¡Gracias por registrarte en Velyo! Ya podés acceder a la plataforma y comenzar a explorar nuestras opciones de alojamiento.\n\n" +
                 "Ingresá desde el siguiente enlace:\n" +
                 "http://localhost:5173/iniciar-sesion\n\n" +
@@ -29,11 +29,11 @@ public class EmailService {
         mailSender.send(message);
     }
 
-        public void sendConfirmReservation(String firstName, String lastName, String email) {
+        public void sendConfirmReservation(String firstname, String lastname, String email) {
             SimpleMailMessage message = new SimpleMailMessage();
             message.setTo(email);
             message.setSubject("¡Tu reserva en Velyo fue confirmada!");
-            message.setText("Hola " + firstName + " " + lastName + ",\n\n" +
+            message.setText("Hola " + firstname + " " + lastname + ",\n\n" +
                     "¡Tu reserva ha sido confirmada exitosamente! Gracias por elegir Velyo para tu próxima estadía.\n\n" +
                     "Podés consultar los detalles de tu reserva iniciando sesión en la plataforma:\n" +
                     "http://localhost:5173/iniciar-sesion\n\n" +

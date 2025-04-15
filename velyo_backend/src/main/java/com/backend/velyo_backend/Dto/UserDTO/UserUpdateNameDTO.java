@@ -11,6 +11,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class UserUpdateNameDTO {
-    private String firstName;
-    private String lastName;
+    private String firstname;
+    private String lastname;
 }

@@ -22,9 +22,9 @@ public class User implements UserDetails {
     @GeneratedValue(generator = "UUID")
     private UUID id;
 
-    private String firstName;
+    private String firstname;
 
-    private String lastName;
+    private String lastname;
 
     private String email;
 
