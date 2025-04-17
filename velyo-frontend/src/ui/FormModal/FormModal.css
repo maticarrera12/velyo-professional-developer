@@ -1,0 +1,41 @@
+.form-modal-dialog{
+    border: none;
+    z-index: 1000;
+}
+
+.form-modal-container{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 5%;
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    margin-inline: auto;
+    padding: 20px;
+    background-color: var(--color-base-100);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.form-modal-close{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: none;
+    align-self: flex-end;
+    border: none;
+    cursor: pointer;
+}
+
+.form-modal-close svg{
+    transition: transform 0.2s ease, fill 0.2s ease;
+}
+.form-modal-close:hover svg{
+    transform: scale(1.2);
+    fill: var(--color-base-900);
+} 
