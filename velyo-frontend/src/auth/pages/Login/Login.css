@@ -1,0 +1,37 @@
+.auth-button{
+    align-self: end;
+}
+
+.auth-form{
+    margin-top: 2rem;
+    align-self: center;
+    text-align: center;
+}
+
+.auth-form h2{
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.auth-form > p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-base-700);
+    margin-top: 0.2rem;
+    margin-bottom: 1.5rem;
+}
+.auth-form > p ~ .form-container{
+    margin-top: 1rem;
+}
+.form-container{
+    text-align: left;
+}
+.form-container > .button{
+    width: 100%;
+}
+
+.form-terms{
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: var(--color-base-700);
+}

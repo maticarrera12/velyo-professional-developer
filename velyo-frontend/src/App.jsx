@@ -1,10 +1,17 @@
+import { AuthProvider } from "./auth/context/AuthProvider"
+import { NotificationProvider } from "./context/NotificationProvider"
+import { Navigation } from "./routes/Navigation"
+
 function App() {
 
 
   return (
-    <>
-  <h1>Hola mundo!</h1>
-    </>
+    <AuthProvider>
+      <NotificationProvider>
+        <Navigation/>
+      </NotificationProvider>
+    </AuthProvider>
+    
   )
 }
 

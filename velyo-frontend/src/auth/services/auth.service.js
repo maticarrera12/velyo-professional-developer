@@ -17,7 +17,7 @@ const authService = {
                     if (error.message === 'Network Error') {
                         throw new Error('Verifique su conexión a Internet.');
                     }
-                    throw new Error('No se pudo iniciar sesión. Por favor, intente nuevamente más tarde.');
+                    throw new Error('No se pudo iniciar sesión. Por favor, intente nuevamente.');
             }
         }
     },
@@ -36,7 +36,7 @@ const authService = {
                     if (error.message === 'Network Error') {
                         throw new Error('Verifique su conexión a Internet.');
                     }
-                    throw new Error('El usuario no pudo ser registrado. Por favor, intente nuevamente más tarde.');
+                    throw new Error('El usuario no pudo ser registrado. Por favor, intente nuevamente.');
             }
         }
     }

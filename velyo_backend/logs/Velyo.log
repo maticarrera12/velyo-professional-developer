@@ -1,32 +1,39 @@
-2025-04-15 12:28:53.240 INFO  [main] c.b.v.VelyoBackendApplication - Starting VelyoBackendApplication using Java 22.0.2 with PID 28532 (C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend\target\classes started by Mati in C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend)
-2025-04-15 12:28:53.247 INFO  [main] c.b.v.VelyoBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2025-04-15 12:28:54.784 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-04-15 12:28:54.787 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
-2025-04-15 12:28:54.788 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-15 12:28:54.856 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
-2025-04-15 12:28:59.608 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-04-15 12:28:59.643 INFO  [main] c.b.v.VelyoBackendApplication - Started VelyoBackendApplication in 6.754 seconds (process running for 7.51)
-2025-04-15 13:43:43.759 INFO  [main] c.b.v.VelyoBackendApplication - Starting VelyoBackendApplication using Java 22.0.2 with PID 15472 (C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend\target\classes started by Mati in C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend)
-2025-04-15 13:43:43.769 INFO  [main] c.b.v.VelyoBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2025-04-15 13:43:45.640 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-04-15 13:43:45.644 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
-2025-04-15 13:43:45.645 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-15 13:43:45.730 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
-2025-04-15 13:43:51.207 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-04-15 13:43:51.249 INFO  [main] c.b.v.VelyoBackendApplication - Started VelyoBackendApplication in 7.91 seconds (process running for 8.849)
-2025-04-15 13:48:37.621 INFO  [main] c.b.v.VelyoBackendApplication - Starting VelyoBackendApplication using Java 22.0.2 with PID 29552 (C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend\target\classes started by Mati in C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend)
-2025-04-15 13:48:37.629 INFO  [main] c.b.v.VelyoBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2025-04-15 13:48:39.233 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-04-15 13:48:39.235 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
-2025-04-15 13:48:39.236 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-15 13:48:39.308 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
-2025-04-15 13:48:45.205 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-04-15 13:48:45.242 INFO  [main] c.b.v.VelyoBackendApplication - Started VelyoBackendApplication in 7.982 seconds (process running for 8.745)
-2025-04-15 13:50:17.256 INFO  [main] c.b.v.VelyoBackendApplication - Starting VelyoBackendApplication using Java 22.0.2 with PID 22900 (C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend\target\classes started by Mati in C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend)
-2025-04-15 13:50:17.263 INFO  [main] c.b.v.VelyoBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2025-04-15 13:50:18.845 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-04-15 13:50:18.848 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
-2025-04-15 13:50:18.848 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-15 13:50:18.909 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
-2025-04-15 13:50:24.887 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-04-15 13:50:24.913 INFO  [main] c.b.v.VelyoBackendApplication - Started VelyoBackendApplication in 8.024 seconds (process running for 8.788)
+2025-04-16 20:21:27.925 INFO  [main] c.b.v.VelyoBackendApplication - Starting VelyoBackendApplication using Java 22.0.2 with PID 37604 (C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend\target\classes started by Mati in C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend)
+2025-04-16 20:21:27.941 INFO  [main] c.b.v.VelyoBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-16 20:21:29.948 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-4040"]
+2025-04-16 20:21:29.953 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2025-04-16 20:21:29.954 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-16 20:21:30.066 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2025-04-16 20:21:37.198 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-4040"]
+2025-04-16 20:21:37.231 INFO  [main] c.b.v.VelyoBackendApplication - Started VelyoBackendApplication in 9.76 seconds (process running for 13.931)
+2025-04-16 20:22:38.993 INFO  [http-nio-4040-exec-2] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-16 20:33:58.757 INFO  [main] c.b.v.VelyoBackendApplication - Starting VelyoBackendApplication using Java 22.0.2 with PID 33424 (C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend\target\classes started by Mati in C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend)
+2025-04-16 20:33:58.764 INFO  [main] c.b.v.VelyoBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-16 20:34:00.344 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-4040"]
+2025-04-16 20:34:00.346 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2025-04-16 20:34:00.347 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-16 20:34:00.413 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2025-04-16 20:34:06.221 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-4040"]
+2025-04-16 20:34:06.260 INFO  [main] c.b.v.VelyoBackendApplication - Started VelyoBackendApplication in 7.874 seconds (process running for 8.612)
+2025-04-16 20:34:12.774 INFO  [http-nio-4040-exec-2] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-16 20:35:39.915 ERROR [http-nio-4040-exec-5] c.b.v.E.GlobalExceptionHandler - Authentication failed: Email o contraseña incorrectos
+2025-04-16 20:35:42.814 ERROR [http-nio-4040-exec-6] c.b.v.E.GlobalExceptionHandler - Authentication failed: Email o contraseña incorrectos
+2025-04-16 20:36:06.509 ERROR [http-nio-4040-exec-8] c.b.v.E.GlobalExceptionHandler - Authentication failed: Email o contraseña incorrectos
+2025-04-16 20:39:20.810 ERROR [http-nio-4040-exec-2] c.b.v.E.GlobalExceptionHandler - Authentication failed: Email o contraseña incorrectos
+2025-04-16 20:39:29.528 ERROR [http-nio-4040-exec-4] c.b.v.E.GlobalExceptionHandler - Authentication failed: Email o contraseña incorrectos
+2025-04-16 20:39:37.261 ERROR [http-nio-4040-exec-5] c.b.v.E.GlobalExceptionHandler - Authentication failed: Email o contraseña incorrectos
+2025-04-16 20:39:39.627 ERROR [http-nio-4040-exec-6] c.b.v.E.GlobalExceptionHandler - Authentication failed: Email o contraseña incorrectos
+2025-04-16 20:40:01.999 ERROR [http-nio-4040-exec-8] c.b.v.E.GlobalExceptionHandler - Authentication failed: Email o contraseña incorrectos
+2025-04-16 20:40:06.947 ERROR [http-nio-4040-exec-10] c.b.v.E.GlobalExceptionHandler - Authentication failed: Email o contraseña incorrectos
+2025-04-16 23:46:13.260 ERROR [http-nio-4040-exec-1] c.b.v.E.GlobalExceptionHandler - Authentication failed: Email o contraseña incorrectos
+2025-04-16 23:46:23.902 ERROR [http-nio-4040-exec-6] c.b.v.E.GlobalExceptionHandler - Authentication failed: Email o contraseña incorrectos
+2025-04-16 23:48:19.551 INFO  [main] c.b.v.VelyoBackendApplication - Starting VelyoBackendApplication using Java 22.0.2 with PID 18448 (C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend\target\classes started by Mati in C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend)
+2025-04-16 23:48:19.560 INFO  [main] c.b.v.VelyoBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-16 23:48:21.217 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-4040"]
+2025-04-16 23:48:21.220 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2025-04-16 23:48:21.221 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-16 23:48:21.283 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2025-04-16 23:48:27.325 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-4040"]
+2025-04-16 23:48:27.354 INFO  [main] c.b.v.VelyoBackendApplication - Started VelyoBackendApplication in 8.179 seconds (process running for 9.398)
+2025-04-16 23:49:17.932 INFO  [http-nio-4040-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-16 23:49:18.260 ERROR [http-nio-4040-exec-2] c.b.v.E.GlobalExceptionHandler - Authentication failed: Email o contraseña incorrectos

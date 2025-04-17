@@ -76,7 +76,7 @@ const userService = {
             throw new Error('No se pudo actualizar el nombre. Por favor, intente nuevamente.');
         }
     },
-    addFavoriteStay: async (values, token) => {
+    addFavoriteAccommodation: async (values, token) => {
         try {
             return await api.post('/users/add-favorite', values, {
                 headers: {
@@ -88,7 +88,7 @@ const userService = {
             throw new Error('No se pudo agregar a favoritos. Por favor, intente nuevamente.');
         }
     },
-    removeFavoriteStay: async (values, token) => {
+    removeFavoriteAccommodation: async (values, token) => {
         try {
             return await api.post('/users/remove-favorite', values, {
                 headers: {
