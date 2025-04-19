@@ -1,9 +1,8 @@
-2025-04-17 10:42:44.424 INFO  [main] c.b.v.VelyoBackendApplication - Starting VelyoBackendApplication using Java 22.0.2 with PID 16392 (C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend\target\classes started by Mati in C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend)
-2025-04-17 10:42:44.438 INFO  [main] c.b.v.VelyoBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2025-04-17 10:42:46.116 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-4040"]
-2025-04-17 10:42:46.119 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
-2025-04-17 10:42:46.119 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-17 10:42:46.185 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
-2025-04-17 10:42:51.207 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-4040"]
-2025-04-17 10:42:51.235 INFO  [main] c.b.v.VelyoBackendApplication - Started VelyoBackendApplication in 7.198 seconds (process running for 8.117)
-2025-04-17 10:43:08.670 INFO  [http-nio-4040-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-19 18:24:08.936 INFO  [main] c.b.v.VelyoBackendApplication - Starting VelyoBackendApplication using Java 22.0.2 with PID 41520 (C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend\target\classes started by Mati in C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend)
+2025-04-19 18:24:08.953 INFO  [main] c.b.v.VelyoBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-19 18:24:10.942 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-4040"]
+2025-04-19 18:24:10.944 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2025-04-19 18:24:10.944 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-19 18:24:11.003 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2025-04-19 18:24:18.327 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-4040"]
+2025-04-19 18:24:18.378 INFO  [main] c.b.v.VelyoBackendApplication - Started VelyoBackendApplication in 9.897 seconds (process running for 14.012)

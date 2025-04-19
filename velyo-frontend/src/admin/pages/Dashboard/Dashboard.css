@@ -1,0 +1,109 @@
+
+.dashboard-main {
+    display: grid;
+    grid-template-columns: 3fr 300px;
+    gap: 2rem;
+    min-height: 100vh;
+    padding-block: 2rem;
+    padding-inline: 3rem 2rem;
+  }
+  
+  .dashboard-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dashboard-article {
+    border-radius: 20px;
+    color: #fff;
+    background-color: var(--color-primary-700);
+    padding: 1rem;
+    height: 200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .dashboard-article > p {
+    position: absolute;
+    top: 1rem;
+  }
+  
+  .dashboard-article > h2 {
+    font-size: 2rem;
+    width: 300px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .dashboard-card-container {
+    margin-block-start: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .card-dashboard-container {
+    border-radius: 16px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    aspect-ratio: 1.7777777778;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+  }
+  
+  .card-dashboard-icon {
+    margin-inline: auto;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary-200);
+    color: var(--color-primary-800);
+    font-size: 2rem;
+  }
+  
+  .card-dashboard-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    font-weight: 600;
+    color: var(--color-base-500);
+  }
+  
+  .card-dashboard-content > p:last-child {
+    font-size: 1.2rem;
+    color: var(--color-base-700);
+  }
+  
+  .dashboard-user-section {
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 1rem;
+    color: var(--color-base-700);
+    text-align: center;
+  }
+  
+  .dashboard-user-avatar {
+    margin-block-start: 1rem;
+    margin-inline: auto;
+    aspect-ratio: 1;
+    width: 40%;
+    border-radius: 100%;
+    background-color: var(--color-base-700);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+  
+  .profile-name {
+    margin-top: 1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  

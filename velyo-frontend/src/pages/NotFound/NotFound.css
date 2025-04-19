@@ -1,0 +1,7 @@
+.not-found-main{
+    display: grid;
+    place-content: center;
+    gap: 1rem;
+    text-align: center;
+    color: var(--color-base-600);
+}

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FormModalContext } from "./formModalContext";
+import { FormModalContext } from "./FormModalContext";
 
 export const FormModalProvider = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);

@@ -1,3 +1,5 @@
+
+import { Avatar } from "@mui/material";
 import "./ItemList.css";
 
 export const ItemList = ({
@@ -6,7 +8,7 @@ export const ItemList = ({
   setDeleteItemId,
   editItem,
 }) => {
-  const { id, name, email, images, image, icon } = data;
+  const { id, name, email, images, image, icon, firstname, lastname } = data;
 
   const handleClickDelete = (e) => {
     e.preventDefault();
@@ -26,14 +28,28 @@ export const ItemList = ({
         return <img src={image} alt="Vista previa" width={80} height={80} />;
     } else if (icon) {
         return <img src={icon} alt="Icono" width={80} height={80} />;
-    }
+    } else if (firstname && lastname){
+         const initials = `${firstname[0]}${lastname[0]}`.toUpperCase();
+         return (
+            <Avatar
+            sx={{
+              bgcolor: "#DF1174", 
+              width: 80,
+              height: 80,
+              fontSize: 24,
+            }}
+          >
+            {initials}
+          </Avatar>
+        );
+      }
     return null;
   }
 
   return (
     <article className="item-list-container">
         <div className="item-list-info">
-            {(images || image || icon) && (
+            {(images || image || icon || (firstname && lastname)) && (
                 <div className="item-list-image">
                     {renderMedia()}
                 </div>

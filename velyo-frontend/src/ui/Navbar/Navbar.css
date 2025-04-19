@@ -45,8 +45,8 @@
 }
 .avatar {
     text-transform: uppercase;
-    background-color: var(--color-primary-300);
-    color: var(--color-base-800);
+    background-color: var(--color-primary-700);
+    color: var(--color-base-100);
     font-weight: 500;
     cursor: pointer;
 }

@@ -14,11 +14,26 @@ export const useUser = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [totalPages, setTotalPages] = useState(0);
 
+  // const getUsers = async (page = 0, size = 10) => {
+  //   try {
+  //     setIsLoading(true);
+  //     const response = await userService.getUsers(token);
+  //     setUsers(response);
+  //     setTotalPages(response.totalPages);
+  //     setError(false);
+  //   } catch {
+  //     console.error("Error fetching users");
+  //     setError(true);
+  //   } finally {
+  //     setIsLoading(false);
+  //   }
+  // };
+
   const getUsers = async (page = 0, size = 10) => {
     try {
       setIsLoading(true);
-      const response = await userService.getUsers(token);
-      setUsers(response);
+      const response = await userService.getUsers(token, page, size); // ✅ pasar los valores
+      setUsers(response); // o response?.data?.data si estás usando Axios con `.data`
       setTotalPages(response.totalPages);
       setError(false);
     } catch {

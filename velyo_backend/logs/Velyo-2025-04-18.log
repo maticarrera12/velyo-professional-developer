@@ -1,0 +1,287 @@
+2025-04-18 11:50:37.502 INFO  [main] c.b.v.VelyoBackendApplication - Starting VelyoBackendApplication using Java 22.0.2 with PID 27212 (C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend\target\classes started by Mati in C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend)
+2025-04-18 11:50:37.517 INFO  [main] c.b.v.VelyoBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-18 11:50:39.241 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-4040"]
+2025-04-18 11:50:39.243 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2025-04-18 11:50:39.243 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-18 11:50:39.318 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2025-04-18 11:50:44.945 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-4040"]
+2025-04-18 11:50:44.976 INFO  [main] c.b.v.VelyoBackendApplication - Started VelyoBackendApplication in 7.893 seconds (process running for 8.899)
+2025-04-18 11:52:54.865 INFO  [http-nio-4040-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-18 11:53:25.488 INFO  [http-nio-4040-exec-5] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 11:53:25.580 INFO  [http-nio-4040-exec-5] c.b.v.s.i.UserService - Devolviendo informacion del dashboard
+2025-04-18 11:53:25.581 INFO  [http-nio-4040-exec-5] c.b.v.C.UserController - Devolviendo la informacion del dashboard
+2025-04-18 11:53:25.590 INFO  [http-nio-4040-exec-6] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 11:53:25.610 INFO  [http-nio-4040-exec-6] c.b.v.s.i.UserService - Devolviendo informacion del dashboard
+2025-04-18 11:53:25.610 INFO  [http-nio-4040-exec-6] c.b.v.C.UserController - Devolviendo la informacion del dashboard
+2025-04-18 11:57:19.327 INFO  [http-nio-4040-exec-1] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 11:57:19.352 INFO  [http-nio-4040-exec-1] c.b.v.s.i.UserService - Devolviendo informacion del dashboard
+2025-04-18 11:57:19.352 INFO  [http-nio-4040-exec-1] c.b.v.C.UserController - Devolviendo la informacion del dashboard
+2025-04-18 11:57:19.356 INFO  [http-nio-4040-exec-2] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 11:57:19.380 INFO  [http-nio-4040-exec-2] c.b.v.s.i.UserService - Devolviendo informacion del dashboard
+2025-04-18 11:57:19.380 INFO  [http-nio-4040-exec-2] c.b.v.C.UserController - Devolviendo la informacion del dashboard
+2025-04-18 16:16:07.795 INFO  [http-nio-4040-exec-8] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:16:07.884 INFO  [http-nio-4040-exec-8] c.b.v.s.i.UserService - Encontrados 1 usuarios
+2025-04-18 16:16:07.884 INFO  [http-nio-4040-exec-8] c.b.v.C.UserController - Devolviendo 1 users
+2025-04-18 16:16:07.919 INFO  [http-nio-4040-exec-7] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:16:07.933 INFO  [http-nio-4040-exec-7] c.b.v.s.i.UserService - Encontrados 1 usuarios
+2025-04-18 16:16:07.933 INFO  [http-nio-4040-exec-7] c.b.v.C.UserController - Devolviendo 1 users
+2025-04-18 16:17:28.523 INFO  [http-nio-4040-exec-2] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:17:28.537 INFO  [http-nio-4040-exec-2] c.b.v.s.i.UserService - Encontrados 1 usuarios
+2025-04-18 16:17:28.537 INFO  [http-nio-4040-exec-2] c.b.v.C.UserController - Devolviendo 1 users
+2025-04-18 16:17:28.543 INFO  [http-nio-4040-exec-4] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:17:28.554 INFO  [http-nio-4040-exec-4] c.b.v.s.i.UserService - Encontrados 1 usuarios
+2025-04-18 16:17:28.554 INFO  [http-nio-4040-exec-4] c.b.v.C.UserController - Devolviendo 1 users
+2025-04-18 16:18:34.576 INFO  [http-nio-4040-exec-8] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:18:34.587 INFO  [http-nio-4040-exec-8] c.b.v.s.i.UserService - Encontrados 1 usuarios
+2025-04-18 16:18:34.588 INFO  [http-nio-4040-exec-8] c.b.v.C.UserController - Devolviendo 1 users
+2025-04-18 16:18:34.594 INFO  [http-nio-4040-exec-7] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:18:34.605 INFO  [http-nio-4040-exec-7] c.b.v.s.i.UserService - Encontrados 1 usuarios
+2025-04-18 16:18:34.605 INFO  [http-nio-4040-exec-7] c.b.v.C.UserController - Devolviendo 1 users
+2025-04-18 16:33:12.612 INFO  [http-nio-4040-exec-2] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:33:12.625 INFO  [http-nio-4040-exec-2] c.b.v.s.i.UserService - Encontrados 1 usuarios
+2025-04-18 16:33:12.625 INFO  [http-nio-4040-exec-2] c.b.v.C.UserController - Devolviendo 1 users
+2025-04-18 16:33:12.632 INFO  [http-nio-4040-exec-4] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:33:12.644 INFO  [http-nio-4040-exec-4] c.b.v.s.i.UserService - Encontrados 1 usuarios
+2025-04-18 16:33:12.645 INFO  [http-nio-4040-exec-4] c.b.v.C.UserController - Devolviendo 1 users
+2025-04-18 16:33:57.021 INFO  [http-nio-4040-exec-3] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:33:57.183 INFO  [http-nio-4040-exec-3] c.b.v.s.i.UserService - Usuario agregado: PM121123123122@gmail.com
+2025-04-18 16:33:57.183 INFO  [http-nio-4040-exec-3] c.b.v.C.UserController - Usuario creado
+2025-04-18 16:33:57.209 INFO  [http-nio-4040-exec-6] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:33:57.223 INFO  [http-nio-4040-exec-6] c.b.v.s.i.UserService - Encontrados 2 usuarios
+2025-04-18 16:33:57.223 INFO  [http-nio-4040-exec-6] c.b.v.C.UserController - Devolviendo 2 users
+2025-04-18 16:34:09.312 INFO  [http-nio-4040-exec-7] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:34:09.355 INFO  [http-nio-4040-exec-7] c.b.v.s.i.UserService - El usuario fue actualizado: PM121123123122@gmail.com
+2025-04-18 16:34:09.357 INFO  [http-nio-4040-exec-7] c.b.v.C.UserController - El usuario con id: a84e6626-00bc-4918-8a65-700ac2123d5c fue actualizado
+2025-04-18 16:34:09.392 INFO  [http-nio-4040-exec-10] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:34:09.405 INFO  [http-nio-4040-exec-10] c.b.v.s.i.UserService - Encontrados 2 usuarios
+2025-04-18 16:34:09.405 INFO  [http-nio-4040-exec-10] c.b.v.C.UserController - Devolviendo 2 users
+2025-04-18 16:34:34.624 INFO  [http-nio-4040-exec-2] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:34:34.694 INFO  [http-nio-4040-exec-2] c.b.v.s.i.UserService - Usuario agregado: sadasdasd@gmail.com
+2025-04-18 16:34:34.694 INFO  [http-nio-4040-exec-2] c.b.v.C.UserController - Usuario creado
+2025-04-18 16:34:34.722 INFO  [http-nio-4040-exec-4] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:34:34.734 INFO  [http-nio-4040-exec-4] c.b.v.s.i.UserService - Encontrados 3 usuarios
+2025-04-18 16:34:34.734 INFO  [http-nio-4040-exec-4] c.b.v.C.UserController - Devolviendo 3 users
+2025-04-18 16:34:40.836 INFO  [http-nio-4040-exec-3] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:34:40.905 INFO  [http-nio-4040-exec-3] c.b.v.s.i.UserService - Usuario agregado: asdfasdf@gmail.com
+2025-04-18 16:34:40.905 INFO  [http-nio-4040-exec-3] c.b.v.C.UserController - Usuario creado
+2025-04-18 16:34:40.932 INFO  [http-nio-4040-exec-6] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:34:40.944 INFO  [http-nio-4040-exec-6] c.b.v.s.i.UserService - Encontrados 4 usuarios
+2025-04-18 16:34:40.944 INFO  [http-nio-4040-exec-6] c.b.v.C.UserController - Devolviendo 4 users
+2025-04-18 16:34:50.681 INFO  [http-nio-4040-exec-7] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:34:50.751 INFO  [http-nio-4040-exec-7] c.b.v.s.i.UserService - Usuario agregado: sdafasd@gmail.com
+2025-04-18 16:34:50.751 INFO  [http-nio-4040-exec-7] c.b.v.C.UserController - Usuario creado
+2025-04-18 16:34:50.781 INFO  [http-nio-4040-exec-10] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:34:50.794 INFO  [http-nio-4040-exec-10] c.b.v.s.i.UserService - Encontrados 5 usuarios
+2025-04-18 16:34:50.794 INFO  [http-nio-4040-exec-10] c.b.v.C.UserController - Devolviendo 5 users
+2025-04-18 16:35:24.383 INFO  [http-nio-4040-exec-1] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:35:24.453 INFO  [http-nio-4040-exec-1] c.b.v.s.i.UserService - Usuario agregado: ghjgh@gmail.com
+2025-04-18 16:35:24.453 INFO  [http-nio-4040-exec-1] c.b.v.C.UserController - Usuario creado
+2025-04-18 16:35:24.484 INFO  [http-nio-4040-exec-2] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:35:24.498 INFO  [http-nio-4040-exec-2] c.b.v.s.i.UserService - Encontrados 6 usuarios
+2025-04-18 16:35:24.499 INFO  [http-nio-4040-exec-2] c.b.v.C.UserController - Devolviendo 6 users
+2025-04-18 16:35:35.201 INFO  [http-nio-4040-exec-5] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:35:35.269 INFO  [http-nio-4040-exec-5] c.b.v.s.i.UserService - Usuario agregado: dfsgdfg@gmail.com
+2025-04-18 16:35:35.270 INFO  [http-nio-4040-exec-5] c.b.v.C.UserController - Usuario creado
+2025-04-18 16:35:35.305 INFO  [http-nio-4040-exec-3] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:35:35.319 INFO  [http-nio-4040-exec-3] c.b.v.s.i.UserService - Encontrados 7 usuarios
+2025-04-18 16:35:35.319 INFO  [http-nio-4040-exec-3] c.b.v.C.UserController - Devolviendo 7 users
+2025-04-18 16:35:46.557 INFO  [http-nio-4040-exec-8] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:35:46.628 INFO  [http-nio-4040-exec-8] c.b.v.s.i.UserService - Usuario agregado: vbncvbn@gmail.com
+2025-04-18 16:35:46.629 INFO  [http-nio-4040-exec-8] c.b.v.C.UserController - Usuario creado
+2025-04-18 16:35:46.661 INFO  [http-nio-4040-exec-7] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:35:46.674 INFO  [http-nio-4040-exec-7] c.b.v.s.i.UserService - Encontrados 8 usuarios
+2025-04-18 16:35:46.674 INFO  [http-nio-4040-exec-7] c.b.v.C.UserController - Devolviendo 8 users
+2025-04-18 16:36:00.261 INFO  [http-nio-4040-exec-9] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:36:00.333 INFO  [http-nio-4040-exec-9] c.b.v.s.i.UserService - Usuario agregado: sdfgdf@gmail.com
+2025-04-18 16:36:00.333 INFO  [http-nio-4040-exec-9] c.b.v.C.UserController - Usuario creado
+2025-04-18 16:36:00.368 INFO  [http-nio-4040-exec-1] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:36:00.381 INFO  [http-nio-4040-exec-1] c.b.v.s.i.UserService - Encontrados 9 usuarios
+2025-04-18 16:36:00.382 INFO  [http-nio-4040-exec-1] c.b.v.C.UserController - Devolviendo 9 users
+2025-04-18 16:36:11.473 INFO  [http-nio-4040-exec-4] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:36:11.542 INFO  [http-nio-4040-exec-4] c.b.v.s.i.UserService - Usuario agregado: tyuityuityu@gmail.com
+2025-04-18 16:36:11.542 INFO  [http-nio-4040-exec-4] c.b.v.C.UserController - Usuario creado
+2025-04-18 16:36:11.581 INFO  [http-nio-4040-exec-5] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:36:11.605 INFO  [http-nio-4040-exec-5] c.b.v.s.i.UserService - Encontrados 10 usuarios
+2025-04-18 16:36:11.605 INFO  [http-nio-4040-exec-5] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 16:36:22.980 INFO  [http-nio-4040-exec-6] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:36:23.051 INFO  [http-nio-4040-exec-6] c.b.v.s.i.UserService - Usuario agregado: asdfasdfasdfasd@gmail.com
+2025-04-18 16:36:23.051 INFO  [http-nio-4040-exec-6] c.b.v.C.UserController - Usuario creado
+2025-04-18 16:36:23.092 INFO  [http-nio-4040-exec-8] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:36:23.109 INFO  [http-nio-4040-exec-8] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 16:36:23.109 INFO  [http-nio-4040-exec-8] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 16:36:25.203 INFO  [http-nio-4040-exec-7] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:36:25.222 INFO  [http-nio-4040-exec-7] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 16:36:25.223 INFO  [http-nio-4040-exec-7] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 16:36:27.193 INFO  [http-nio-4040-exec-10] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:36:27.214 INFO  [http-nio-4040-exec-10] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 16:36:27.214 INFO  [http-nio-4040-exec-10] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 16:36:34.948 INFO  [http-nio-4040-exec-1] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:36:34.964 INFO  [http-nio-4040-exec-1] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 16:36:34.964 INFO  [http-nio-4040-exec-1] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 16:36:40.205 INFO  [http-nio-4040-exec-4] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:36:40.223 INFO  [http-nio-4040-exec-4] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 16:36:40.223 INFO  [http-nio-4040-exec-4] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 16:36:43.280 INFO  [http-nio-4040-exec-5] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:36:43.297 INFO  [http-nio-4040-exec-5] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 16:36:43.297 INFO  [http-nio-4040-exec-5] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 16:43:53.562 INFO  [http-nio-4040-exec-8] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:43:53.586 INFO  [http-nio-4040-exec-8] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 16:43:53.586 INFO  [http-nio-4040-exec-8] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 16:43:53.592 INFO  [http-nio-4040-exec-7] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:43:53.613 INFO  [http-nio-4040-exec-7] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 16:43:53.613 INFO  [http-nio-4040-exec-7] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 16:43:57.773 INFO  [http-nio-4040-exec-10] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:43:57.797 INFO  [http-nio-4040-exec-10] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 16:43:57.797 INFO  [http-nio-4040-exec-10] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 16:43:57.801 INFO  [http-nio-4040-exec-9] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:43:57.821 INFO  [http-nio-4040-exec-9] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 16:43:57.821 INFO  [http-nio-4040-exec-9] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 16:44:04.554 INFO  [http-nio-4040-exec-2] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:44:04.572 INFO  [http-nio-4040-exec-2] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 16:44:04.573 INFO  [http-nio-4040-exec-2] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 16:44:04.577 INFO  [http-nio-4040-exec-4] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:44:04.598 INFO  [http-nio-4040-exec-4] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 16:44:04.599 INFO  [http-nio-4040-exec-4] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 16:44:05.549 INFO  [http-nio-4040-exec-5] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:44:05.569 INFO  [http-nio-4040-exec-5] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 16:44:05.569 INFO  [http-nio-4040-exec-5] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 16:44:05.573 INFO  [http-nio-4040-exec-3] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:44:05.592 INFO  [http-nio-4040-exec-3] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 16:44:05.593 INFO  [http-nio-4040-exec-3] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 16:44:06.483 INFO  [http-nio-4040-exec-6] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:44:06.507 INFO  [http-nio-4040-exec-6] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 16:44:06.507 INFO  [http-nio-4040-exec-6] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 16:44:06.512 INFO  [http-nio-4040-exec-8] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:44:06.529 INFO  [http-nio-4040-exec-8] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 16:44:06.529 INFO  [http-nio-4040-exec-8] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 16:44:24.257 INFO  [http-nio-4040-exec-10] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:44:24.278 INFO  [http-nio-4040-exec-10] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 16:44:24.278 INFO  [http-nio-4040-exec-10] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 16:44:24.283 INFO  [http-nio-4040-exec-9] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:44:24.300 INFO  [http-nio-4040-exec-9] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 16:44:24.300 INFO  [http-nio-4040-exec-9] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 16:44:26.229 INFO  [http-nio-4040-exec-1] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:44:26.245 INFO  [http-nio-4040-exec-1] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 16:44:26.245 INFO  [http-nio-4040-exec-1] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 16:46:36.994 ERROR [http-nio-4040-exec-3] c.b.v.E.GlobalExceptionHandler - Authentication failed: Email o contraseña incorrectos
+2025-04-18 16:46:55.860 INFO  [http-nio-4040-exec-8] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:46:55.873 INFO  [http-nio-4040-exec-8] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 16:46:55.874 INFO  [http-nio-4040-exec-8] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 16:47:07.818 ERROR [http-nio-4040-exec-7] c.b.v.E.GlobalExceptionHandler - Authentication failed: Email o contraseña incorrectos
+2025-04-18 16:48:09.063 INFO  [http-nio-4040-exec-2] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:48:09.077 INFO  [http-nio-4040-exec-2] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 16:48:09.078 INFO  [http-nio-4040-exec-2] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 16:51:47.020 INFO  [http-nio-4040-exec-8] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:51:47.045 INFO  [http-nio-4040-exec-8] c.b.v.s.i.UserService - Devolviendo informacion del dashboard
+2025-04-18 16:51:47.045 INFO  [http-nio-4040-exec-8] c.b.v.C.UserController - Devolviendo la informacion del dashboard
+2025-04-18 16:51:47.049 INFO  [http-nio-4040-exec-7] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:51:47.068 INFO  [http-nio-4040-exec-7] c.b.v.s.i.UserService - Devolviendo informacion del dashboard
+2025-04-18 16:51:47.068 INFO  [http-nio-4040-exec-7] c.b.v.C.UserController - Devolviendo la informacion del dashboard
+2025-04-18 16:51:48.288 INFO  [http-nio-4040-exec-1] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:51:48.306 INFO  [http-nio-4040-exec-1] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 16:51:48.306 INFO  [http-nio-4040-exec-1] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 16:51:48.309 INFO  [http-nio-4040-exec-2] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:51:48.329 INFO  [http-nio-4040-exec-2] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 16:51:48.329 INFO  [http-nio-4040-exec-2] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 16:51:50.226 INFO  [http-nio-4040-exec-5] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:51:50.235 INFO  [http-nio-4040-exec-5] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 16:51:50.235 INFO  [http-nio-4040-exec-5] c.b.v.C.UserController - Devolviendo 1 users
+2025-04-18 16:52:21.079 INFO  [http-nio-4040-exec-6] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:52:21.091 INFO  [http-nio-4040-exec-6] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 16:52:21.091 INFO  [http-nio-4040-exec-6] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 16:53:44.464 INFO  [http-nio-4040-exec-9] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 16:53:44.472 INFO  [http-nio-4040-exec-9] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 16:53:44.472 INFO  [http-nio-4040-exec-9] c.b.v.C.UserController - Devolviendo 1 users
+2025-04-18 17:50:22.713 INFO  [http-nio-4040-exec-4] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 17:50:22.731 INFO  [http-nio-4040-exec-4] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 17:50:22.731 INFO  [http-nio-4040-exec-4] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 17:51:19.528 INFO  [http-nio-4040-exec-6] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 17:51:19.546 INFO  [http-nio-4040-exec-6] c.b.v.s.i.UserService - Devolviendo informacion del dashboard
+2025-04-18 17:51:19.546 INFO  [http-nio-4040-exec-6] c.b.v.C.UserController - Devolviendo la informacion del dashboard
+2025-04-18 17:51:19.549 INFO  [http-nio-4040-exec-8] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 17:51:19.570 INFO  [http-nio-4040-exec-8] c.b.v.s.i.UserService - Devolviendo informacion del dashboard
+2025-04-18 17:51:19.570 INFO  [http-nio-4040-exec-8] c.b.v.C.UserController - Devolviendo la informacion del dashboard
+2025-04-18 18:15:51.036 INFO  [main] c.b.v.VelyoBackendApplication - Starting VelyoBackendApplication using Java 22.0.2 with PID 25628 (C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend\target\classes started by Mati in C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend)
+2025-04-18 18:15:51.045 INFO  [main] c.b.v.VelyoBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-18 18:15:52.598 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-4040"]
+2025-04-18 18:15:52.601 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2025-04-18 18:15:52.602 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-18 18:15:52.666 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2025-04-18 18:15:57.353 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-4040"]
+2025-04-18 18:15:57.385 INFO  [main] c.b.v.VelyoBackendApplication - Started VelyoBackendApplication in 6.694 seconds (process running for 7.473)
+2025-04-18 18:16:06.084 INFO  [http-nio-4040-exec-2] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-18 18:16:06.229 INFO  [http-nio-4040-exec-3] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 18:16:06.451 INFO  [http-nio-4040-exec-3] c.b.v.s.i.UserService - Devolviendo informacion del dashboard
+2025-04-18 18:16:06.452 INFO  [http-nio-4040-exec-3] c.b.v.C.UserController - Devolviendo la informacion del dashboard
+2025-04-18 18:16:06.497 INFO  [http-nio-4040-exec-4] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 18:16:06.522 INFO  [http-nio-4040-exec-4] c.b.v.s.i.UserService - Devolviendo informacion del dashboard
+2025-04-18 18:16:06.522 INFO  [http-nio-4040-exec-4] c.b.v.C.UserController - Devolviendo la informacion del dashboard
+2025-04-18 18:21:54.201 INFO  [http-nio-4040-exec-9] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 18:21:54.228 INFO  [http-nio-4040-exec-9] c.b.v.s.i.UserService - Devolviendo informacion del dashboard
+2025-04-18 18:21:54.228 INFO  [http-nio-4040-exec-9] c.b.v.C.UserController - Devolviendo la informacion del dashboard
+2025-04-18 18:21:54.233 INFO  [http-nio-4040-exec-10] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 18:21:54.257 INFO  [http-nio-4040-exec-10] c.b.v.s.i.UserService - Devolviendo informacion del dashboard
+2025-04-18 18:21:54.258 INFO  [http-nio-4040-exec-10] c.b.v.C.UserController - Devolviendo la informacion del dashboard
+2025-04-18 23:32:10.077 INFO  [http-nio-4040-exec-5] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 23:32:10.134 INFO  [http-nio-4040-exec-5] c.b.v.s.i.UserService - Devolviendo informacion del dashboard
+2025-04-18 23:32:10.134 INFO  [http-nio-4040-exec-5] c.b.v.C.UserController - Devolviendo la informacion del dashboard
+2025-04-18 23:32:10.141 INFO  [http-nio-4040-exec-6] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: carreramatias12@gmail.com
+2025-04-18 23:32:10.166 INFO  [http-nio-4040-exec-6] c.b.v.s.i.UserService - Devolviendo informacion del dashboard
+2025-04-18 23:32:10.166 INFO  [http-nio-4040-exec-6] c.b.v.C.UserController - Devolviendo la informacion del dashboard
+2025-04-18 23:34:25.058 INFO  [http-nio-4040-exec-5] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: pamelamanarin89@gmail.com
+2025-04-18 23:34:25.077 INFO  [http-nio-4040-exec-5] c.b.v.s.i.UserService - Devolviendo informacion del dashboard
+2025-04-18 23:34:25.078 INFO  [http-nio-4040-exec-5] c.b.v.C.UserController - Devolviendo la informacion del dashboard
+2025-04-18 23:34:25.082 INFO  [http-nio-4040-exec-6] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: pamelamanarin89@gmail.com
+2025-04-18 23:34:25.101 INFO  [http-nio-4040-exec-6] c.b.v.s.i.UserService - Devolviendo informacion del dashboard
+2025-04-18 23:34:25.101 INFO  [http-nio-4040-exec-6] c.b.v.C.UserController - Devolviendo la informacion del dashboard
+2025-04-18 23:35:08.804 INFO  [http-nio-4040-exec-9] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: pamelamanarin89@gmail.com
+2025-04-18 23:35:08.839 INFO  [http-nio-4040-exec-9] c.b.v.s.i.UserService - Encontrados 12 usuarios
+2025-04-18 23:35:08.839 INFO  [http-nio-4040-exec-9] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 23:35:08.851 INFO  [http-nio-4040-exec-10] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: pamelamanarin89@gmail.com
+2025-04-18 23:35:08.871 INFO  [http-nio-4040-exec-10] c.b.v.s.i.UserService - Encontrados 12 usuarios
+2025-04-18 23:35:08.871 INFO  [http-nio-4040-exec-10] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 23:35:26.268 INFO  [http-nio-4040-exec-1] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: pamelamanarin89@gmail.com
+2025-04-18 23:35:26.278 INFO  [http-nio-4040-exec-1] c.b.v.s.i.UserService - Encontrados 12 usuarios
+2025-04-18 23:35:26.278 INFO  [http-nio-4040-exec-1] c.b.v.C.UserController - Devolviendo 2 users
+2025-04-18 23:35:39.023 INFO  [http-nio-4040-exec-4] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: pamelamanarin89@gmail.com
+2025-04-18 23:35:39.066 INFO  [http-nio-4040-exec-4] c.b.v.s.i.UserService - El usuario ha sido borrado: vbncvbn@gmail.com
+2025-04-18 23:35:39.067 INFO  [http-nio-4040-exec-4] c.b.v.C.UserController - El usuario con id: ff3fdadd-fee6-44e5-8da3-4f034b2684bf fue borrado
+2025-04-18 23:35:39.087 INFO  [http-nio-4040-exec-6] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: pamelamanarin89@gmail.com
+2025-04-18 23:35:39.099 INFO  [http-nio-4040-exec-6] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 23:35:39.099 INFO  [http-nio-4040-exec-6] c.b.v.C.UserController - Devolviendo 1 users
+2025-04-18 23:35:43.458 INFO  [http-nio-4040-exec-9] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: pamelamanarin89@gmail.com
+2025-04-18 23:35:43.479 INFO  [http-nio-4040-exec-9] c.b.v.s.i.UserService - Devolviendo informacion del dashboard
+2025-04-18 23:35:43.479 INFO  [http-nio-4040-exec-9] c.b.v.C.UserController - Devolviendo la informacion del dashboard
+2025-04-18 23:35:43.483 INFO  [http-nio-4040-exec-10] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: pamelamanarin89@gmail.com
+2025-04-18 23:35:43.502 INFO  [http-nio-4040-exec-10] c.b.v.s.i.UserService - Devolviendo informacion del dashboard
+2025-04-18 23:35:43.502 INFO  [http-nio-4040-exec-10] c.b.v.C.UserController - Devolviendo la informacion del dashboard
+2025-04-18 23:35:55.136 INFO  [http-nio-4040-exec-3] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: pamelamanarin89@gmail.com
+2025-04-18 23:35:55.154 INFO  [http-nio-4040-exec-3] c.b.v.s.i.UserService - Devolviendo informacion del dashboard
+2025-04-18 23:35:55.156 INFO  [http-nio-4040-exec-3] c.b.v.C.UserController - Devolviendo la informacion del dashboard
+2025-04-18 23:35:55.159 INFO  [http-nio-4040-exec-4] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: pamelamanarin89@gmail.com
+2025-04-18 23:35:55.177 INFO  [http-nio-4040-exec-4] c.b.v.s.i.UserService - Devolviendo informacion del dashboard
+2025-04-18 23:35:55.177 INFO  [http-nio-4040-exec-4] c.b.v.C.UserController - Devolviendo la informacion del dashboard
+2025-04-18 23:37:14.186 INFO  [http-nio-4040-exec-9] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: pamelamanarin89@gmail.com
+2025-04-18 23:37:14.206 INFO  [http-nio-4040-exec-9] c.b.v.s.i.UserService - Devolviendo informacion del dashboard
+2025-04-18 23:37:14.207 INFO  [http-nio-4040-exec-9] c.b.v.C.UserController - Devolviendo la informacion del dashboard
+2025-04-18 23:37:14.210 INFO  [http-nio-4040-exec-10] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: pamelamanarin89@gmail.com
+2025-04-18 23:37:14.227 INFO  [http-nio-4040-exec-10] c.b.v.s.i.UserService - Devolviendo informacion del dashboard
+2025-04-18 23:37:14.227 INFO  [http-nio-4040-exec-10] c.b.v.C.UserController - Devolviendo la informacion del dashboard
+2025-04-18 23:37:17.076 INFO  [http-nio-4040-exec-3] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: pamelamanarin89@gmail.com
+2025-04-18 23:37:17.093 INFO  [http-nio-4040-exec-3] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 23:37:17.093 INFO  [http-nio-4040-exec-3] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 23:37:17.097 INFO  [http-nio-4040-exec-4] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: pamelamanarin89@gmail.com
+2025-04-18 23:37:17.113 INFO  [http-nio-4040-exec-4] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 23:37:17.113 INFO  [http-nio-4040-exec-4] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 23:38:01.383 INFO  [http-nio-4040-exec-7] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: pamelamanarin89@gmail.com
+2025-04-18 23:38:01.402 INFO  [http-nio-4040-exec-7] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 23:38:01.402 INFO  [http-nio-4040-exec-7] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 23:38:01.406 INFO  [http-nio-4040-exec-8] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: pamelamanarin89@gmail.com
+2025-04-18 23:38:01.423 INFO  [http-nio-4040-exec-8] c.b.v.s.i.UserService - Encontrados 11 usuarios
+2025-04-18 23:38:01.423 INFO  [http-nio-4040-exec-8] c.b.v.C.UserController - Devolviendo 10 users
+2025-04-18 23:38:03.486 INFO  [http-nio-4040-exec-10] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: pamelamanarin89@gmail.com
+2025-04-18 23:38:03.500 INFO  [http-nio-4040-exec-10] c.b.v.s.i.UserService - El usuario ha sido borrado: dfsgdfg@gmail.com
+2025-04-18 23:38:03.500 INFO  [http-nio-4040-exec-10] c.b.v.C.UserController - El usuario con id: 4aafaebe-70f2-4faa-b3b0-0f46757d2aea fue borrado
+2025-04-18 23:38:03.521 INFO  [http-nio-4040-exec-1] c.b.v.S.C.JwtAuthenticationFilter - Validando el token JWT para el usuario: pamelamanarin89@gmail.com
+2025-04-18 23:38:03.541 INFO  [http-nio-4040-exec-1] c.b.v.s.i.UserService - Encontrados 10 usuarios
+2025-04-18 23:38:03.541 INFO  [http-nio-4040-exec-1] c.b.v.C.UserController - Devolviendo 10 users

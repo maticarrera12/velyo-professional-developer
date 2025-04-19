@@ -47,7 +47,7 @@ export const Navbar = () => {
     ];
 
     const adminNavItem = {
-        path: '/administracion',
+        path: '/administracion/dashboard',
         icon: <LuLayoutDashboard />,
         label: 'Administración',
         roles: ['ADMIN']
@@ -94,9 +94,9 @@ export const Navbar = () => {
     const AvatarDropdown = useMemo(() => (
         <Dropdown menu={{ items: menuItems }} trigger={['click']}>
             <button className='button-avatar'>
-                <Avatar className='avatar' size={40}>
-                    {user ? `${user.firstname[0]}${user.lastname[0]}` : 'USER'}
-                </Avatar>
+            <Avatar className="avatar" size={40}>
+  {user ? `${user.firstname[0].toUpperCase()}${user.lastname[0].toUpperCase()}` : 'USER'}
+</Avatar>
             </button>
         </Dropdown>
     ), [menuItems, user]);

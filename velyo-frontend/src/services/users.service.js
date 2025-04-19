@@ -2,18 +2,30 @@ import api from "../api";
 
 
 const userService = {
-    getUsers: async (token) => {
+    // getUsers: async (token) => {
+    //     try {
+    //         const response = await api.get('/users', {
+    //             headers: {
+    //                 'Authorization': `Bearer ${token}`
+    //             }
+    //         });
+    //         return response.data;
+    //     } catch {
+    //         throw new Error('No se pudieron obtener los usuarios. Por favor, intente nuevamente.');
+    //     }
+    // },
+    getUsers: async (token, page = 0, size = 10) => {
         try {
-            const response = await api.get('/users', {
-                headers: {
-                    'Authorization': `Bearer ${token}`
-                }
-            });
-            return response.data;
+          const response = await api.get(`/users?page=${page}&size=${size}`, {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          });
+          return response.data;
         } catch {
-            throw new Error('No se pudieron obtener los usuarios. Por favor, intente nuevamente.');
+          throw new Error("No se pudieron obtener los usuarios. Por favor, intente nuevamente.");
         }
-    },
+      },
     deleteUser: async (id, token) => {
         try {
             return await api.delete(`/users/${id}`, {
