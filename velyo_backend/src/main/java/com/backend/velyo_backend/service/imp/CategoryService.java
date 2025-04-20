@@ -112,7 +112,7 @@ public class CategoryService implements ICategoryService, BaseUrl {
         Page<CategoryDTO> pageCategories =categoryRepository.findAll(pageable)
                 .map(CategoryMapper.INSTANCE::entityToDto);
         pageCategories.forEach(categoryDTO -> {
-            categoryDTO.setImage(getBaseUrl() + "/api/ctategories/images/" + categoryDTO.getImage());
+            categoryDTO.setImage(getBaseUrl() + "/api/categories/images/" + categoryDTO.getImage());
         });
         return pageCategories;
     }

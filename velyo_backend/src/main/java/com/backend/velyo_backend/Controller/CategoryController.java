@@ -20,6 +20,8 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.UUID;
 
@@ -84,30 +86,25 @@ public class CategoryController {
         return ResponseEntity.status(HttpStatus.OK).body(updatedCategory);
     }
 
-//    @GetMapping("/images/{imageName}")
-//    public ResponseEntity<Resource> getImage(@PathVariable String imageName) throws MalformedURLException{
-//        log.debug("Recibida la solicitud para obtener imagen: {}", imageName);
-//       Resource resource = categoryService.getImage(imageName);
-//       log.info("Devolviendo images: {}", imageName);
-//       return ResponseEntity.ok()
-//               .contentType(MediaType.IMAGE_JPEG)
-//               .body(resource);
-//    }
-@GetMapping("/images/{imageName}")
-public ResponseEntity<Resource> getImage(@PathVariable String imageName) throws IOException {
-    log.debug("Received request to get image: {}", imageName);
-    Resource resource = categoryService.getImage(imageName);
+    @GetMapping("/images/{imageName}")
+    public ResponseEntity<Resource> getImage(@PathVariable String imageName) throws MalformedURLException {
+        log.debug("Recibida la solicitud para obtener imagen: {}", imageName);
+        Resource resource = categoryService.getImage(imageName);
+        log.info("Devolviendo imagen: {}", imageName);
 
-    // Detecta el tipo MIME automáticamente
-    String contentType = Files.probeContentType(resource.getFile().toPath());
-    if (contentType == null) {
-        contentType = "application/octet-stream";
+        // Determinar el tipo de contenido dinámicamente
+        String contentType = "application/octet-stream"; // por defecto
+        try {
+            Path path = Paths.get("uploads/categories").resolve(imageName).normalize();
+            contentType = Files.probeContentType(path);
+        } catch (IOException ex) {
+            log.warn("No se pudo determinar el tipo de contenido para: {}", imageName);
+        }
+
+        return ResponseEntity.ok()
+                .contentType(MediaType.parseMediaType(contentType))
+                .body(resource);
     }
-
-    return ResponseEntity.ok()
-            .contentType(MediaType.parseMediaType(contentType))
-            .body(resource);
-}
 
 
     @DeleteMapping("/{id}")

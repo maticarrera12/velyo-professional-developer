@@ -1,8 +1,6 @@
-2025-04-19 18:24:08.936 INFO  [main] c.b.v.VelyoBackendApplication - Starting VelyoBackendApplication using Java 22.0.2 with PID 41520 (C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend\target\classes started by Mati in C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend)
-2025-04-19 18:24:08.953 INFO  [main] c.b.v.VelyoBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2025-04-19 18:24:10.942 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-4040"]
-2025-04-19 18:24:10.944 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
-2025-04-19 18:24:10.944 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-19 18:24:11.003 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
-2025-04-19 18:24:18.327 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-4040"]
-2025-04-19 18:24:18.378 INFO  [main] c.b.v.VelyoBackendApplication - Started VelyoBackendApplication in 9.897 seconds (process running for 14.012)
+2025-04-20 19:06:49.033 INFO  [main] c.b.v.VelyoBackendApplication - Starting VelyoBackendApplication using Java 22.0.2 with PID 20288 (C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend\target\classes started by Mati in C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend)
+2025-04-20 19:06:49.050 INFO  [main] c.b.v.VelyoBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-20 19:06:51.486 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-4040"]
+2025-04-20 19:06:51.490 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2025-04-20 19:06:51.491 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-20 19:06:51.585 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
