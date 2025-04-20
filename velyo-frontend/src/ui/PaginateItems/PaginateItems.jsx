@@ -14,7 +14,7 @@ export const PaginateItems = ({fetchData, isLoading, data, deleteItem, totalPage
     const [showModal, setShowModal] = useState(false)
     const [deleteItemId, setDeleteItemId] = useState(null)
     const location = useLocation()
-
+    console.log('DATA QUE LLEGA A PaginateItems:', data);
 
     useEffect(()=>{
         fetchData(currentPage - 1)

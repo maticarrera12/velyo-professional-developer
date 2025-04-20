@@ -381,7 +381,7 @@ form *,
   border-color: var(--color-base-700);
 }
 
-.thumbs-container {
+.thumb-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -390,7 +390,7 @@ form *,
   gap: .5rem;
 }
 
-.thumbs-container .thumb {
+.thumb-container .thumb {
   display: inline-flex;
   justify-content: center;
   border-radius: 4px;
