@@ -1,0 +1,41 @@
+.profile-container{
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 600px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+.profile-info > figure {
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    width: 230px;
+    border-radius: 100%;
+    background-color: var(--color-primary-700);
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.profile-info > h3{
+    margin-top: 1.3rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--color-base-500);
+}
+
+.profile-info > p{
+    margin-top: 0.3rem;
+    text-align: center;
+    color: var(--color-base-700);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.profile-form{
+    display: grid;
+    gap: 1rem;
+}

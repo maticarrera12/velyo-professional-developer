@@ -40,14 +40,18 @@ export const PaginateItems = ({fetchData, isLoading, data, deleteItem, totalPage
         <Empty description="¡Ups! Parece que no hay nada cargado."/> 
     ) : (
         data?.map((item, index)=> (
-            <Link key={index} to={`${location.pathname}/${item.id}`}>
-                <ItemList
+            // <Link key={index} to={`${location.pathname}/${item.id}`}>
+            <div key={index}>
+                 <ItemList
                 data={item}
                 openCloseModal={openCloseModalDelete}
                 setDeleteItemId={setDeleteItemId}
                 editItem={editItem}
                 />
-            </Link>
+            </div>   
+            
+           
+            // {/* </Link> */}
         ))
     )
 }

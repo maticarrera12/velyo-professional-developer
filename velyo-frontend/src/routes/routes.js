@@ -10,6 +10,7 @@ import { AuthLayout } from "../layouts/AuthLayout/AuthLayout";
 import { UserLayout } from "../layouts/UserLayout/UserLayout";
 import Home from "../pages/Home/Home";
 import { NotFound } from "../pages/NotFound/NotFound";
+import { Profile } from "../pages/Profile/Profile";
 
 const publicRoutes = [
     {
@@ -40,7 +41,15 @@ const publicRoutes = [
         layout: UserLayout,
         roles: [],
         exact: true
+    },
+      {
+        path: "/perfil",
+        component: Profile,
+        layout: UserLayout,
+        roles: ['USER', 'ADMIN'],
+        exact: true
     }
+    
 ]
 
 const adminRoutes = [

@@ -1,75 +1,73 @@
 import { useCallback, useContext, useEffect, useState } from "react";
 import * as Yup from "yup";
 import { NotificationContext } from "../../../context/NotificationContext";
-import { useCategory } from "../../../hooks/useCategory";
+import { useAmenity } from "../../../hooks/useAmenity";
 import { FormModalContext } from "../../../context/FormModalContext";
 import { useFormik } from "formik";
 import { useDropzone } from "react-dropzone";
-import { DropboxOutlined, Loading3QuartersOutlined, PlusCircleOutlined } from "@ant-design/icons";
-
-export const CategoryForm = ({ category, onRefetch }) => {
+import {
+    DropboxOutlined,
+  Loading3QuartersOutlined,
+  PlusCircleOutlined,
+} from "@ant-design/icons";
+export const AmenityForm = ({ amenity, onRefetch }) => {
   const { toaster } = useContext(NotificationContext);
-  const { isLoading, addCategory, editCategory } = useCategory();
+  const { isLoading, addAmenity, editAmenity } = useAmenity();
   const { handleCancel } = useContext(FormModalContext);
   const [files, setFiles] = useState([]);
 
   const formik = useFormik({
     initialValues: {
       name: "",
-      description: "",
-      image: [],
+      icon: [],
     },
     validationSchema: Yup.object(
-      category
+      amenity
         ? {
             name: Yup.string().required("El nombre es obligatorio"),
-            description: Yup.string().required("La descripcion es obligatoria"),
           }
         : {
             name: Yup.string().required("El nombre es obligatorio"),
-            description: Yup.string().required("La descripcion es obligatoria"),
-            image: Yup.array()
-              .min(1, "Se requiere una imagen")
-              .required("La imagen es obligatoria"),
+            icon: Yup.array()
+              .min(1, "Se rquiere un icono")
+              .required("El icono es obligatorio"),
           }
     ),
     validateOnChange: true,
     onSubmit: async (values) => {
-      if (category) {
+      if (amenity) {
         try {
-          values.id = category.id;
-          await editCategory(values);
+          (values.id = amenity.id), await editAmenity(values);
           formik.resetForm();
           setFiles([]);
           handleCancel();
           onRefetch();
           toaster["success"]({
-            message: "Categoría editada correctamente",
-            description: "La categoría se ha editado correctamente",
+            message: "Característica editada correctamente",
+            description: "La característica se ha editado correctamente",
             duration: 3,
           });
         } catch (error) {
           toaster["error"]({
-            message: "Error al editar la categoría",
+            message: "Error al editar la característica",
             description: error.message,
             duration: 3,
           });
         }
       } else {
         try {
-          await addCategory(values);
-          formik.resetForm();
-          setFiles([]);
+          await addAmenity(values);
+          formik.resetForm(), setFiles([]);
           handleCancel();
           onRefetch();
           toaster["success"]({
-            message: "Categoría agregada correctamente",
-            description: "La categoría se ha agregado correctamente",
+            message: "Característica agregada correctamente",
+            description: "La característica se ha agregado correctamente",
             duration: 3,
           });
         } catch (error) {
           toaster["error"]({
-            message: "Error al agregar la categoría",
+            message: "Error al agregar la característica",
             description: error.message,
             duration: 3,
           });
@@ -79,25 +77,38 @@ export const CategoryForm = ({ category, onRefetch }) => {
   });
 
   useEffect(() => {
-    if (category) {
+    if (amenity) {
       formik.setValues({
-        name: category.name,
-        description: category.description,
+        name: amenity.name,
       });
     } else {
       formik.resetForm();
       setFiles([]);
     }
-  }, [category]);
+  }, [amenity]);
 
   useEffect(() => {
-    return () => files.forEach((file) => URL.revokeObjectURL(file.preview));
+    return () => {
+      files.forEach((file) => URL.revokeObjectURL(file.preview));
+    };
   }, [files]);
 
   const onDrop = useCallback((acceptedFiles) => {
-    formik.setFieldValue("image", acceptedFiles);
+    const svgFiles = acceptedFiles.filter(
+      (file) => file.type === "image/svg+xml" || file.name.endsWith("svg")
+    );
+
+    if (svgFiles.length === 0) {
+      toaster["error"]({
+        message: "Formato incorrecto",
+        description: "Solo se permiten archivos SVG",
+        duration: 3,
+      });
+      return;
+    }
+    formik.setFieldValue("icon", svgFiles);
     setFiles(
-      acceptedFiles.map((file) =>
+      svgFiles.map((file) =>
         Object.assign(file, {
           preview: URL.createObjectURL(file),
         })
@@ -107,12 +118,13 @@ export const CategoryForm = ({ category, onRefetch }) => {
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     accept: {
-      "image/*": [],
+      "image/svg+xml": [".svg"],
     },
     onDrop,
-    maxFiles: 1,
+    maxfiles: 1,
     noClick: false,
     noKeyboard: false,
+    multiple: false,
   });
 
   const thumbs = files.map((file) => (
@@ -132,8 +144,7 @@ export const CategoryForm = ({ category, onRefetch }) => {
 
   return (
     <>
-      <h2 className="item-form-title">{category ? "Editar" : "Agregar"}</h2>
-
+      <h2 className="item-form-title">{amenity ? "Editar" : "Agregar"}</h2>
       <form className="item-form-form" onSubmit={formik.handleSubmit}>
         <div className="form-container">
           <label className="form-label">
@@ -150,27 +161,13 @@ export const CategoryForm = ({ category, onRefetch }) => {
             <label className="label-error">{formik.errors.name}</label>
           )}
         </div>
-        <div className="form-container">
-          <label className="form-label">
-            Descripcion
-            <input
-              type="text"
-              placeholder="Descripcion"
-              name="description"
-              value={formik.values.description}
-              onChange={formik.handleChange}
-            />
-          </label>
-          {formik.errors.description && (
-            <label className="label-error">{formik.errors.description}</label>
-          )}
-        </div>
-        {category && (
+
+        {amenity && (
           <div className="form-container">
             <label className="form-label">
-              Imagen actual
+              Icono Actual
               <figure className="form-image">
-                <img src={category.image} alt={category.name} />
+                <img src={amenity.icon} alt={amenity.name} />
               </figure>
             </label>
           </div>
@@ -178,31 +175,35 @@ export const CategoryForm = ({ category, onRefetch }) => {
 
         <div className="form-container">
           <label className="form-label">
-            {category ? "Nueva Imagen" : "Imagen"}
-            <div 
-              {...getRootProps({ 
-                className: `dropzone ${isDragActive ? 'active' : ''}` 
+            {amenity ? "Nuevo Icono" : "Icono"}
+            <div
+              {...getRootProps({
+                className: `dropzone ${isDragActive ? "dropzone--active" : ""}`,
               })}
               onClick={(e) => e.stopPropagation()}
             >
               <input {...getInputProps()} />
-              <DropboxOutlined style={{ fontSize: '24px', marginBottom: '8px' }} />
+              <DropboxOutlined
+                style={{ fontSize: "24px", marginBottom: "8px" }}
+              />
               <p>
                 {isDragActive
-                  ? "Suelta la imagen aquí"
-                  : "Arrastra una imagen o haz click para seleccionar una"}
+                  ? "Suelta el archivo SVG aquí"
+                  : "Arrastra y suelta un icono SVG aquí, o haz clic para seleccionar"}
               </p>
             </div>
           </label>
-          {formik.errors.image && (
-            <label className="label-error">{formik.errors.image}</label>
+          {formik.errors.icon && (
+            <label htmlFor="" className="label-error">
+              {formik.errors.icon}
+            </label>
           )}
           <aside className="thumb-container">{thumbs}</aside>
         </div>
 
-        <button 
-          type="submit" 
-          className="button button-primary" 
+        <button
+          className="button button-primary"
+          type="submit"
           disabled={isLoading}
         >
           {isLoading ? (
@@ -210,7 +211,7 @@ export const CategoryForm = ({ category, onRefetch }) => {
           ) : (
             <PlusCircleOutlined />
           )}
-          {category ? "Editar" : "Agregar"}
+          {amenity ? "Editar" : "Agregar"}{" "}
         </button>
       </form>
     </>

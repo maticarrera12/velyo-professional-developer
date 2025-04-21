@@ -74,7 +74,7 @@ public class AmenityController {
         return ResponseEntity.status(HttpStatus.OK).body(amenityFound);
     }
 
-    @GetMapping("/svg/{name}")
+    @GetMapping("/svg/{iconName}")
     public ResponseEntity<Resource> getAmenityIcon(@PathVariable String iconName) throws MalformedURLException{
         log.debug("Recibida la solicitud para obtener el icono por nombre: {}", iconName);
         Resource resource = amenityService.getIcon(iconName);
