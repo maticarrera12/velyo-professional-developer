@@ -30,6 +30,8 @@ public interface AccommodationMapper {
     @Mapping(target = "unavailableDates", ignore = true)
     @Mapping(target =  "reviews", ignore = true)
     @Mapping(target = "totalReviews", ignore = true)
+    @Mapping(source = "description", target = "description")
+    @Mapping(source = "price", target = "price")
     AccommodationDTO entityToDto(Accommodation accommodation);
 
 
@@ -38,6 +40,8 @@ public interface AccommodationMapper {
     @Mapping(source = "category_id", target = "category.id")
     @Mapping(source = "avgRating", target = "avgRating")
     @Mapping(source = "address", target = "address", qualifiedByName = "addressDTOToAddress")
+    @Mapping(source = "description", target = "description")
+    @Mapping(source = "price", target = "price")
     Accommodation dtoToEntity(AccommodationDTO accommodationDTO);
 
     @Named("accommodationImagesToStrings")

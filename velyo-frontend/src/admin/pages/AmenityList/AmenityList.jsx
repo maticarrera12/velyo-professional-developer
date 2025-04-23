@@ -37,7 +37,7 @@ export const AmenityList = () => {
         amenity={amenity}
       />
     );
-    handleShowModal;
+    handleShowModal();
   };
   return (
     <main className="dashboard-list-container">

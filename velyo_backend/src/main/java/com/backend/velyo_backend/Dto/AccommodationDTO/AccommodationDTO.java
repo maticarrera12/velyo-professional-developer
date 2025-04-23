@@ -30,7 +30,7 @@ public class AccommodationDTO implements Serializable {
     private String description;
     private Set<String> images;
     private Set<AmenityDTO> amenities;
-    private Double Price;
+    private Double price;
     private UUID category_id;
     private AddressDTO address;
     private Double avgRating;

@@ -67,7 +67,7 @@ const accommodationService = {
             formData.append('images', image);
         });
         
-        return api.post("/accommodations". formData, {
+        return api.post("/accommodations", formData, {
             headers:{
                 'Accept': 'application/json',
                 'Content-Type': 'multipart/form-data',
@@ -81,8 +81,10 @@ const accommodationService = {
         })
     },
     editAccommodation: async (data,token) => {
+        console.log("amenities:", data.amenities)
         const formData = new FormData();
         const accommodation = {
+            id: data.id,
             name: data.name,
             price: data.price,
             description: data.description,

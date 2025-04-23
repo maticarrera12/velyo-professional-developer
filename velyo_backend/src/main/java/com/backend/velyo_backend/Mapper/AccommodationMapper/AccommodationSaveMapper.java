@@ -21,12 +21,14 @@ public interface AccommodationSaveMapper {
     @Mapping(source = "amenities", target = "amenities", qualifiedByName = "amenitiesToUuids")
     @Mapping(source = "category.id", target = "category_id")
     @Mapping(source = "address", target = "address")
+    @Mapping(source = "description", target = "description")
     AccommodationSaveDTO entityToDto(Accommodation accommodation);
 
     @Mapping(source = "images", target = "images", qualifiedByName = "stringsToAccommodationImages")
     @Mapping(source = "amenities", target = "amenities", qualifiedByName = "uuidsToAmenities")
     @Mapping(source = "category_id", target = "category.id")
     @Mapping(source = "address", target = "address")
+    @Mapping(source = "description", target = "description")
     Accommodation dtoToEntity(AccommodationSaveDTO accommodationSaveDTO);
 
     @Named("accommodationImagesToStrings")

@@ -187,12 +187,12 @@ public class AccommodationService implements IAccommodationService, BaseUrl {
 //                accommodationImage.setId(accommodationImageRepository.findByUrl(accommodationImage.getUrl()).get().getId());
 //        }
 
-        if (accommodationDTO.getAmenities() != null){
+        if (accommodationDTO.getAmenities() != null) {
             Set<Amenity> updatedAmenities = accommodationDTO.getAmenities().stream()
-                    .map(amenityDTO -> amenityRepository.findById(amenityDTO)
-                            .orElseThrow(()-> new ResourceNotFoundException("La amenity con id: " + amenityDTO + " no fue encontrada")))
+                    .map(amenityId -> amenityRepository.findById(amenityId) // Aquí solo necesitas buscar por ID
+                            .orElseThrow(() -> new ResourceNotFoundException("La amenity con id: " + amenityId + " no fue encontrada")))
                     .collect(Collectors.toSet());
-            accommodationToUpdate = accommodationRepository.save(accommodationToUpdate);
+            accommodationToUpdate.setAmenities(updatedAmenities);  // Asocia las amenities encontradas al alojamiento
         }
 
 
@@ -203,6 +203,7 @@ public class AccommodationService implements IAccommodationService, BaseUrl {
         }
         log.debug("El alojamientoha ha sido actualizado: {}", accommodationToUpdate.getName());
     }
+
     @Override
     public Set<AccommodationSummaryDTO> findByCategoryAndCountryOrCity(Set<UUID> categoryIds, String searchTerm, LocalDate checkIn, LocalDate checkOut) {
         log.debug("Encontrando alojamientos por categoria ids: {} y termino de busqueda: {}", categoryIds, searchTerm);

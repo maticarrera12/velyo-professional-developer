@@ -390,7 +390,7 @@ form *,
   gap: .5rem;
 }
 
-.thumb-container .thumb {
+.thumb {
   display: inline-flex;
   justify-content: center;
   border-radius: 4px;
@@ -408,7 +408,7 @@ form *,
   overflow: hidden;
 }
 
-.thumb-img {
+.thumb-img{
   display: block;
   width: auto;
   height: 100%;
@@ -475,6 +475,7 @@ form *,
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+  overflow-y: auto;
 
 }
 
