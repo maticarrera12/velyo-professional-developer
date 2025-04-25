@@ -1,9 +1,9 @@
 import { StarFilled } from "@ant-design/icons"
 import "./ReviewForm.css"
 import { format } from 'date-fns'
-const stars = (rating) => {
+const stars = (ratingScore) => {
     const stars = []
-    for(let i = 0; i < rating; i++){
+    for(let i = 0; i < ratingScore; i++){
         stars.push(<StarFilled key={i}/>)
     }
     return stars

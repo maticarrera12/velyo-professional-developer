@@ -8,6 +8,7 @@ import { Register } from "../auth/pages/Register/Register";
 import { AdminLayout } from "../layouts/AdminLayout/AdminLayout";
 import { AuthLayout } from "../layouts/AuthLayout/AuthLayout";
 import { UserLayout } from "../layouts/UserLayout/UserLayout";
+import { BookingConfirm } from "../pages/BookingConfirm/BookingConfirm";
 import Home from "../pages/Home/Home";
 import { NotFound } from "../pages/NotFound/NotFound";
 import { Profile } from "../pages/Profile/Profile";
@@ -45,6 +46,13 @@ const publicRoutes = [
       {
         path: "/perfil",
         component: Profile,
+        layout: UserLayout,
+        roles: ['USER', 'ADMIN'],
+        exact: true
+    },
+    {
+        path: '/confirmar-reserva/:id',
+        component: BookingConfirm,
         layout: UserLayout,
         roles: ['USER', 'ADMIN'],
         exact: true
