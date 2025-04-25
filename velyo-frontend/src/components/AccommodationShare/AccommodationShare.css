@@ -1,0 +1,30 @@
+.accommodation-share-container h2 ~ figure{
+    margin-top: 1rem;
+}
+
+.accommodation-share-figure{
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.accommodation-share-figure img{
+    border-radius: .5rem;
+}
+
+.accommodation-share-figure figcaption{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+.accommodation-share-social-networks{
+    margin-top: 1rem;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+}
+
+.accommodation-share-container .form-container{
+    margin-top: 1rem;
+}

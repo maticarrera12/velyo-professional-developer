@@ -1,0 +1,86 @@
+.review-form-title {
+    margin-top: 1.2rem;
+    text-align: center;
+}
+
+.review-form-form > div:has(button) {
+    text-align: end;
+    margin-top: 0.5rem;
+}
+
+.review-form-rating-container {
+    display: flex;
+    justify-content: center;
+}
+
+.review-form-rating-container:has(.review-form-rating:last-child > input:checked) .review-form-rating:nth-child(n+1) label > .icon,
+.review-form-rating-container:has(.review-form-rating:last-child > input:hover) .review-form-rating:nth-child(n+1) label > .icon {
+    color: var(--color-primary-700);
+}
+
+.review-form-rating-container:has(.review-form-rating:nth-child(4) > input:checked) .review-form-rating:nth-child(-n+3) label > .icon,
+.review-form-rating-container:has(.review-form-rating:nth-child(4) > input:hover) .review-form-rating:nth-child(-n+3) label > .icon {
+    color: var(--color-primary-700);
+}
+
+.review-form-rating-container:has(.review-form-rating:nth-child(4) > input:hover) .review-form-rating:nth-child(5) label > .icon {
+    color: var(--color-base-200);
+}
+
+.review-form-rating-container:has(.review-form-rating:nth-child(3) > input:checked) .review-form-rating:nth-child(-n+2) label > .icon,
+.review-form-rating-container:has(.review-form-rating:nth-child(3) > input:hover) .review-form-rating:nth-child(-n+2) label > .icon {
+    color: var(--color-primary-700);
+}
+
+.review-form-rating-container:has(.review-form-rating:nth-child(3) > input:hover) .review-form-rating:nth-child(4) label > .icon,
+.review-form-rating-container:has(.review-form-rating:nth-child(3) > input:hover) .review-form-rating:nth-child(5) label > .icon {
+    color: var(--color-base-200);
+}
+
+.review-form-rating-container:has(.review-form-rating:nth-child(2) > input:checked) .review-form-rating:nth-child(1) label > .icon,
+.review-form-rating-container:has(.review-form-rating:nth-child(2) > input:hover) .review-form-rating:nth-child(1) label > .icon {
+    color: var(--color-primary-700);
+}
+
+.review-form-rating-container:has(.review-form-rating:nth-child(2) > input:hover) .review-form-rating:nth-child(3) label > .icon,
+.review-form-rating-container:has(.review-form-rating:nth-child(2) > input:hover) .review-form-rating:nth-child(4) label > .icon,
+.review-form-rating-container:has(.review-form-rating:nth-child(2) > input:hover) .review-form-rating:nth-child(5) label > .icon {
+    color: var(--color-base-200);
+}
+
+.review-form-rating-container:has(.review-form-rating:nth-child(1) > input:hover) .review-form-rating:nth-child(2) label > .icon,
+.review-form-rating-container:has(.review-form-rating:nth-child(1) > input:hover) .review-form-rating:nth-child(3) label > .icon,
+.review-form-rating-container:has(.review-form-rating:nth-child(1) > input:hover) .review-form-rating:nth-child(4) label > .icon,
+.review-form-rating-container:has(.review-form-rating:nth-child(1) > input:hover) .review-form-rating:nth-child(5) label > .icon {
+    color: var(--color-base-200);
+}
+
+.review-form-rating input[type="radio"]:checked ~ label > .icon {
+    color: var(--color-primary-700);
+}
+
+.review-form-rating label > .icon {
+    font-size: 3rem;
+    color: var(--color-base-200);
+    transition: color 0.2s ease;
+    cursor: pointer;
+}
+
+.review-form-rating label > .icon:hover {
+    color: var(--color-primary-700);
+}
+
+.review-form-rating input[type="radio"] {
+    display: none;
+}
+
+/* Extra: estilos para el textarea */
+textarea {
+    width: 100%;
+    resize: vertical;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-base-300);
+    margin-top: 0.5rem;
+}
