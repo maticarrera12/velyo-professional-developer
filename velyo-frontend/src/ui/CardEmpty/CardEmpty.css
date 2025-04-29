@@ -1,9 +1,10 @@
-.card-empty p:first-child{
+  .empty-card p:first-child{
     font-weight: 700;
     font-size: 1.3rem;
-}
+  }
 
-.card-empty > a{
+  .empty-card > a{
     margin-block-start: 1rem;
     display: inline-block;
-}
+  }
+  

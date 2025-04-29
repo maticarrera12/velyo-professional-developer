@@ -1,0 +1,19 @@
+.bookings-user-container {
+    margin-block-start: 2rem;
+    width: 100%;
+    max-width: 1280px;
+    padding-inline: 1rem;
+    margin-inline: auto;
+}
+.bookings-user-container-option {
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--color-base-500);
+}
+.bookings-user-container-option:hover {
+    color: #d9376e;
+}
+.booking-card-container ~ .booking-card-container {
+    margin-block-start: 1rem;
+}

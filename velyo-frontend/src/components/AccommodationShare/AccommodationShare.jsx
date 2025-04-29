@@ -1,6 +1,7 @@
 import { useContext, useState } from "react"
 import "./AccommodationShare.css"
 import { NotificationContext } from "../../context/NotificationContext"
+import { CopyOutlined, FacebookFilled, WhatsAppOutlined, XOutlined } from "@ant-design/icons"
 
 export const AccommodationShare = ({accommodation}) => {
 

@@ -15,8 +15,8 @@ const bookingService = {
         );
       });
   },
-  getBookingByUser: async (token, date) => {
-    const params = date ? `?date={date}` : "";
+  getBookingsByUser: async (token, date) => {
+    const params = date ? `?date=${date}` : "";
     return api
       .get(`/bookings/user${params}`, {
         headers: {

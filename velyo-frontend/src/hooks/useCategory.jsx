@@ -42,6 +42,7 @@ export const useCategory = () =>{
         }
     };
 
+
     const deleteCategory = async (id) => {
         setIsLoading(true)
         setError(null)

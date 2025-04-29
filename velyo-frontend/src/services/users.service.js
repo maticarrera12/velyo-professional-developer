@@ -97,7 +97,7 @@ const userService = {
                 }
             });
         } catch {
-            throw new Error('No se pudo agregar a favoritos. Por favor, intente nuevamente.');
+            throw new Error('No se pudo agregar a favoritos. Por favor, intente nuevamente más tarde.');
         }
     },
     removeFavoriteAccommodation: async (values, token) => {

@@ -444,6 +444,50 @@ form *,
   font-size: 1.1rem;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+.accommodation-card .accommodation-card-favorite{
+  position: absolute;
+  z-index: 10;
+  top: 1rem;
+  right: 1rem;
+}
+a:has(.accommodation-card-container){
+  text-decoration: none;
+  color: var(--color-base-900);
+}
+.accommodation-card-favorite{
+  aspect-ratio: 1;
+  width: 2rem;
+  border-radius: 100%;
+  border: none;
+  background-color: var(--color-base-100);
+  cursor: pointer;
+  color: var(--color-base-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.accommodation-card-favorite:hover{
+  background-color: var(--color-base-200);
+  color: var(--color-base-700);
+}
+
+.accommodation-card-favorite-active{
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-500);
+}
+.accommodation-card-favorite-active:hover{
+  background-color: var(--color-primary-200);
+  color: var(--color-primary-700);
+}
+
+.accommodation-card-favorite-active:disabled{
+  background-color: var(--color-base-100);
+  color: var(--color-base-400);
+  cursor: not-allowed;
+}
 
 .dashboard-list-container{
   padding-block: 2rem;

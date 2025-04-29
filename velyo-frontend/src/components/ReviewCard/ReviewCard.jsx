@@ -1,5 +1,5 @@
 import { StarFilled } from "@ant-design/icons"
-import "./ReviewForm.css"
+import "./ReviewCard.css"
 import { format } from 'date-fns'
 const stars = (ratingScore) => {
     const stars = []
@@ -8,7 +8,7 @@ const stars = (ratingScore) => {
     }
     return stars
 }
-export const ReviewForm = ({review}) => {
+export const ReviewCard = ({review}) => {
 
 
   return (

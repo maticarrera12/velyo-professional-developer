@@ -28,13 +28,13 @@ export const useBooking = () =>{
         }
     };
     
-    const getBookingByUser = async (date) => {
+    const getBookingsByUser = async (date) => {
         setIsLoading(true);
         setError(null);
         setSuccess(false);
     
         try {
-            const response = await bookingService.getBookingByUser(token, date);
+            const response = await bookingService.getBookingsByUser(token, date);
             setBookings(response.data);
             setSuccess(true);
             return response.data;
@@ -70,7 +70,7 @@ export const useBooking = () =>{
         totalPages,
         success,
         createBooking,
-        getBookingByUser,
+        getBookingsByUser,
         confirmBooking
     };
 }

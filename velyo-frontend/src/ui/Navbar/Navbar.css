@@ -8,6 +8,7 @@
     padding-inline: 20px;
     align-items: center;
     z-index: 100;
+    background-color: var(--color-base-100);
 }
 .navbar .navbar__logo {
     display: flex;

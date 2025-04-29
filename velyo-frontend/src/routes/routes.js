@@ -8,7 +8,10 @@ import { Register } from "../auth/pages/Register/Register";
 import { AdminLayout } from "../layouts/AdminLayout/AdminLayout";
 import { AuthLayout } from "../layouts/AuthLayout/AuthLayout";
 import { UserLayout } from "../layouts/UserLayout/UserLayout";
+import { AccommodationDetail } from "../pages/AccommodationDetail/AccommodationDetail";
+import { AccommodationFavorites } from "../pages/AccommodationFavorites/AccommodationFavorites";
 import { BookingConfirm } from "../pages/BookingConfirm/BookingConfirm";
+import { BookingsUser } from "../pages/BookingsUser/BookingsUser";
 import Home from "../pages/Home/Home";
 import { NotFound } from "../pages/NotFound/NotFound";
 import { Profile } from "../pages/Profile/Profile";
@@ -51,10 +54,31 @@ const publicRoutes = [
         exact: true
     },
     {
+        path: '/mis-reservas',
+        component: BookingsUser,
+        layout: UserLayout,
+        roles: ['USER', 'ADMIN'],
+        exact: true
+    },
+    {
+        path: '/favoritos',
+        component: AccommodationFavorites,
+        layout: UserLayout,
+        roles: ['USER', 'ADMIN'],
+        exact: true
+    },
+    {
         path: '/confirmar-reserva/:id',
         component: BookingConfirm,
         layout: UserLayout,
         roles: ['USER', 'ADMIN'],
+        exact: true
+    } ,
+     {
+        path:'/alojamientos/:id',
+        component: AccommodationDetail,
+        layout: UserLayout,
+        roles: [],
         exact: true
     }
     

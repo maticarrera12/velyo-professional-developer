@@ -28,6 +28,7 @@ export const AccommodationCard = ({ accommodation }) => {
         duration: 3,
       });
     } catch (error) {
+      console.log("Error al añadir a favoritos:", error);
       toaster["error"]({
         message: "Error al añadir a favoritos.",
         description: error.message,
@@ -93,7 +94,7 @@ export const AccommodationCard = ({ accommodation }) => {
             </figure>
             <div className="accommodation-card-info">
                 <h3 className="accommodation-card-tile">{name}</h3>
-                <p>{address.country} - {address.province}</p>
+                <p>{address.country} - {address.city}</p>
                 {
                     totalReviews === 0 || !totalReviews ? <p className="stay-card-score">Sin Calificaciones</p> : <p className="accommodation-card-score"><span>{numeral(avgRating).format('0.0')}</span>{totalReviews} Calificaciones</p>
                 }

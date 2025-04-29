@@ -23,7 +23,7 @@ public class AccommodationSummaryDTO implements Serializable {
     private UUID id;
     private String name;
     private Double price;
-    private Set <String> images;
+    private Set<String> images;
     private AddressDTO address;
     private Double avgRating;
     private Integer totalReviews;

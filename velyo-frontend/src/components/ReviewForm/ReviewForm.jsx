@@ -26,7 +26,7 @@ export const ReviewForm = ({ booking, onRefetch }) => {
     }),
     onSubmit: async (values) => {
       const body = {
-        id_reservation: booking.id,
+        id_booking: booking.id,
         id_accommodation: booking.accommodation.id,
         ...values,
       };
@@ -53,7 +53,7 @@ export const ReviewForm = ({ booking, onRefetch }) => {
   return (
     <>
       <h3 className="review-form-title">Califica este alojamiento</h3>
-      <form className="review-form-form" onSubmit={formik.handleReset}>
+      <form className="review-form-form" onSubmit={formik.handleSubmit}>
         <div className="review-form-rating-container">
           <div className="review-form-rating">
             <input
@@ -96,8 +96,8 @@ export const ReviewForm = ({ booking, onRefetch }) => {
           </div>
           <div className="review-form-rating">
             <input
-              type="four"
-              id="three"
+              type="radio"
+              id="four"
               value={4}
               name="rating"
               hidden
@@ -109,8 +109,8 @@ export const ReviewForm = ({ booking, onRefetch }) => {
           </div>
           <div className="review-form-rating">
             <input
-              type="five"
-              id="three"
+              type="radio"
+              id="five"
               value={5}
               name="rating"
               hidden

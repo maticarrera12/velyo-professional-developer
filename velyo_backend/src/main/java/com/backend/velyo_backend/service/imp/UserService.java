@@ -138,7 +138,7 @@ public class UserService implements IUserService, BaseUrl {
     public UserDTO addFavorite(UserFavoriteDTO userFavoritesDTO) {
         log.info("Agregando a favoritos para el usuario con id: {}", userFavoritesDTO.getId());
         User user  = userRepository.findById(userFavoritesDTO.getId()).orElseThrow(()->{
-            log.error("El usuario con id: {} no fue encontrado", userFavoritesDTO.getFavorite());
+            log.error("El usuario con id: {} no fue encontrado", userFavoritesDTO.getId());
             return new ResourceNotFoundException("El usuario con id: {}" + userFavoritesDTO.getId() + " no fue encontrado");
         });
         Accommodation accommodation = accommodationRepository.findById(userFavoritesDTO.getFavorite()).orElseThrow(()->{
