@@ -523,6 +523,28 @@ a:has(.accommodation-card-container){
 
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-base-300); 
+  border-radius: 10px;
+  border: 2px solid transparent; 
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-base-500);
+}
+
+
+
 @media(width > 768px){
   .item-form-form{
     max-height: 75dvh;

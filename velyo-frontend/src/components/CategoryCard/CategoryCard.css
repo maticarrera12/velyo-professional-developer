@@ -21,6 +21,15 @@ a:has(> .category-card-container):hover {
     cursor: pointer;
 }
 
+.svg-icon svg,
+.svg-icon path,
+.svg-icon g {
+  fill: #000 !important;
+  opacity: 1 !important;
+  width: 60px;
+  height: 60px;
+}
+
 .category-card-container::after {
     content: '';
     position: absolute;

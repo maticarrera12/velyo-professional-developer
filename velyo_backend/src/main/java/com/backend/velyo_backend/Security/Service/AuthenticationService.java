@@ -39,7 +39,7 @@ public class AuthenticationService implements BaseUrl {
                 .lastname(request.getLastname())
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))
-                .role(Role.ADMIN)
+                .role(Role.USER)
                 .build();
         if(userRepository.existsByEmail(user.getEmail())){
             throw new ResourceAlreadyExistsException("El Mail ya esta registrado");
