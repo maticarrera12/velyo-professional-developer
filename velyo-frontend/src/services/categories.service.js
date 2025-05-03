@@ -2,9 +2,9 @@ import api from "../api";
 
 
 const categoryService = {
-    getCategories: async () => {
+    getCategories: async (page,size) => {
         try {
-            const response = await api.get('/categories');
+            const response = await api.get(`/categories?page=${page}&size=${size}`);
             return response.data;
         } catch {
             throw new Error('No se pudieron obtener las categorías. Por favor, intente nuevamente.');

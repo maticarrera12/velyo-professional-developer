@@ -11,10 +11,10 @@ export const useCategory = () =>{
     const [totalPages, setTotalPages] = useState(0);
     const [success, setSuccess] = useState(false);
 
-    const getCategories = async () => {
+    const getCategories = async (page = 0, size = 5) => {
         try{
             setIsLoading(true);
-            const response = await categoryService.getCategories();
+            const response = await categoryService.getCategories(page, size);
             setCategories(response);
             setTotalPages(response.totalPages);
             setError(false)
