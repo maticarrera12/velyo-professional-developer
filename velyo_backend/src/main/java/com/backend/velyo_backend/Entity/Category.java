@@ -8,6 +8,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Objects;
 import java.util.Set;
 import java.util.UUID;
 
@@ -32,4 +33,9 @@ public class Category {
 
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Accommodation> accommodations;
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id); // Only use immutable fields
+    }
 }

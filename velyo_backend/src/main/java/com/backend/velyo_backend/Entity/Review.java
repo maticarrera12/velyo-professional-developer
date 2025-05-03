@@ -12,6 +12,7 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import java.time.LocalDateTime;
+import java.util.Objects;
 import java.util.UUID;
 
 @Data
@@ -42,4 +43,18 @@ public class Review {
     @JoinColumn(name = "id_accommodation", nullable = false, foreignKey = @ForeignKey(name = "FK_id_accommodation"))
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Accommodation accommodation;
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    // Add proper equals() implementation
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Review review = (Review) o;
+        return Objects.equals(id, review.id);
+    }
 }

@@ -9,6 +9,7 @@ import { FieldArray, FormikProvider, useFormik } from "formik";
 import { useCallback } from "react";
 import { useDropzone } from "react-dropzone";
 import {
+  DeleteFilled,
   DropboxOutlined,
   Loading3QuartersOutlined,
   PlusCircleOutlined,

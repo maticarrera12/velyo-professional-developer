@@ -67,7 +67,7 @@ public class AccommodationController {
             @RequestParam(value = "checkOut", required = false) LocalDate checkOut
     ){
         log.debug("Recibida la solicitud para obtener todos los alojamientos por categoria id: {}", categoryIds);
-        Set<AccommodationSummaryDTO> accommodations = accommodationService.findByCategoryAndCountryOrCity(categoryIds, searchTerm, checkIn, checkOut);
+        Set<AccommodationSummaryDTO> accommodations = accommodationService.findByCategoryIdsAndCountryOrCity(categoryIds, searchTerm, checkIn, checkOut);
         return ResponseEntity.status(HttpStatus.OK)
                 .body(
                         new ApiPageResponse<>(

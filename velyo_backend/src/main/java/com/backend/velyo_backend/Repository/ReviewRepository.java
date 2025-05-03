@@ -15,4 +15,5 @@ public interface ReviewRepository extends JpaRepository<Review, UUID> {
     Set<Review> findByAccommodationId(UUID accommodationId);
 
     Page<Review> findByAccommodationId(UUID accommodationId, Pageable pageable);
+
 }

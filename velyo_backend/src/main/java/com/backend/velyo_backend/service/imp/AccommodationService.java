@@ -77,24 +77,45 @@ public class AccommodationService implements IAccommodationService, BaseUrl {
 
     @Override
     public AccommodationDTO findById(UUID id) {
-        log.debug("Buscando alojamientos por id: {}", id);
+        log.debug("Buscando alojamiento por id: {}", id);
+
         Accommodation accommodation = accommodationRepository.findById(id)
-                .orElseThrow(()->{
-                    log.error("El alojamiento con id: {} no fue encontrada", id);
+                .orElseThrow(() -> {
+                    log.error("El alojamiento con id: {} no fue encontrado", id);
                     return new ResourceNotFoundException("El alojamiento con id: " + id + " no fue encontrado");
                 });
+
+        // Obtener fechas no disponibles
         Set<LocalDate> unavailableDates = getUnavailableDates(id);
+
+        // Obtener reviews
         Set<Review> reviews = reviewRepository.findByAccommodationId(id);
+
+        // Mapear entidad a DTO
         AccommodationDTO accommodationFound = AccommodationMapper.INSTANCE.entityToDto(accommodation);
-        Set<ReviewSummaryDTO> reviewsDTO = reviews.stream().map(ReviewSummaryMapper.INSTANCE::entityToDto)
+
+        // Mapear reviews a DTO
+        Set<ReviewSummaryDTO> reviewsDTO = reviews.stream()
+                .map(ReviewSummaryMapper.INSTANCE::entityToDto)
                 .collect(Collectors.toSet());
+
+        // Setear reviews y total
         accommodationFound.setReviews(reviewsDTO);
+        accommodationFound.setTotalReviews(reviewsDTO.size());
+
+        // Modificar URLs de imágenes
         accommodationFound.setImages(accommodationFound.getImages().stream()
                 .map(image -> getBaseUrl() + "/api/accommodations/images/" + image)
                 .collect(Collectors.toSet()));
+
+        // Modificar íconos de amenities
         accommodationFound.setAmenities(accommodationFound.getAmenities().stream()
                 .peek(amenity -> amenity.setIcon(getBaseUrl() + "/api/amenities/svg/" + amenity.getIcon()))
                 .collect(Collectors.toSet()));
+
+        // Setear fechas no disponibles
+        accommodationFound.setUnavailableDates(unavailableDates);
+
         return accommodationFound;
     }
 
@@ -129,26 +150,30 @@ public class AccommodationService implements IAccommodationService, BaseUrl {
         return pageAccommodations;
     }
 
-    @Override
-    public Set<AccommodationSummaryDTO> getRandomAccommodations(int size) {
-        log.debug("Buscando alojamientos random con size: {}", size);
-        Set<AccommodationSummaryDTO> randomAccommodations = new HashSet<>();
-        List<Accommodation> accommodations = accommodationRepository.findAll();
+@Override
+public Set<AccommodationSummaryDTO> getRandomAccommodations(int size) {
+    List<Accommodation> accommodations = accommodationRepository.findAll();
 
-        if (accommodations.size() < size)
-            size = accommodations.size();
-        Random random = new Random();
-        while (randomAccommodations.size() < size)
-            randomAccommodations.add(AccommodationSummaryMapper.INSTANCE.entityToDto(accommodations.get(random.nextInt(accommodations.size()))));
-        randomAccommodations.forEach(accommodation ->{
-            accommodation.setTotalReviews(reviewRepository.findByAccommodationId(accommodation.getId()).size());
-            accommodation.setImages(accommodation.getImages().stream()
-                    .map(image->getBaseUrl() + "/api/accommodations/images/" + image)
-                    .collect(Collectors.toSet()));
-        });
-        log.info("Devolviendo {} alojamientos random", randomAccommodations.size());
-        return randomAccommodations;
-    }
+    if (accommodations.size() < size)
+        size = accommodations.size();
+
+    Collections.shuffle(accommodations);
+    List<Accommodation> selected = accommodations.subList(0, size);
+
+    Set<AccommodationSummaryDTO> result = selected.stream()
+            .map(AccommodationSummaryMapper.INSTANCE::entityToDto)
+            .collect(Collectors.toCollection(LinkedHashSet::new)); // conserva el orden
+
+    result.forEach(accommodation -> {
+        accommodation.setTotalReviews(reviewRepository.findByAccommodationId(accommodation.getId()).size());
+        accommodation.setImages(accommodation.getImages().stream()
+                .map(image -> getBaseUrl() + "/api/accommodations/images/" + image)
+                .collect(Collectors.toSet()));
+    });
+
+    return result;
+}
+
 
     @Override
     public void update(AccommodationSaveDTO accommodationDTO, MultipartFile[] images, Set<String> imagesToDelete) throws IOException {
@@ -205,7 +230,7 @@ public class AccommodationService implements IAccommodationService, BaseUrl {
     }
 
     @Override
-    public Set<AccommodationSummaryDTO> findByCategoryAndCountryOrCity(Set<UUID> categoryIds, String searchTerm, LocalDate checkIn, LocalDate checkOut) {
+    public Set<AccommodationSummaryDTO> findByCategoryIdsAndCountryOrCity(Set<UUID> categoryIds, String searchTerm, LocalDate checkIn, LocalDate checkOut) {
         log.debug("Encontrando alojamientos por categoria ids: {} y termino de busqueda: {}", categoryIds, searchTerm);
         Set<AccommodationSummaryDTO> accommodations;
 

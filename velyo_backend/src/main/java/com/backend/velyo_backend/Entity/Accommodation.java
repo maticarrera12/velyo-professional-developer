@@ -10,6 +10,8 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 import java.util.UUID;
 
@@ -62,4 +64,9 @@ public class Accommodation {
     @NotNull(message = "Policies cannot be null")
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<AccommodationPolicy> policies;
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id); // Only use immutable fields
+    }
 }

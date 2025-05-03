@@ -19,6 +19,7 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -55,48 +56,60 @@ public class ReviewService implements IReviewService {
         log.info("Reviews encontradas: {}", reviews);
         return reviews;
     }
-
     @Override
+    @Transactional
     public ReviewSummaryDTO save(ReviewCreateDTO reviewCreateDTO, String email) {
-        log.debug("Solicitud para guardar Review: {}", reviewCreateDTO);
+        log.debug("Request to save Review: {}", reviewCreateDTO);
 
-        User user = userRepository.findByEmail(email).orElseThrow(()->{
-            log.error("El usuario con email: {} no fue encontrado ", email);
-            return new ResourceNotFoundException("El usuario con email " +  email + " no fue encontrado");
+        // 1. Fetch required entities
+        User user = userRepository.findByEmail(email).orElseThrow(() -> {
+            log.error("User with email: {} not found", email);
+            return new ResourceNotFoundException("User with email: " + email + " not found");
         });
 
-        Accommodation accommodation = accommodationRepository.findById(reviewCreateDTO.getId_accommodation()).orElseThrow(()->{
-            log.error("El alojamiento con id: {} no fue encontrado", reviewCreateDTO.getId_accommodation());
-            return new ResourceNotFoundException("El alojamiento con id: " + reviewCreateDTO.getId_accommodation() + " no fue encontrado");
-        });
+        Accommodation accommodation = accommodationRepository.findById(reviewCreateDTO.getId_accommodation())
+                .orElseThrow(() -> {
+                    log.error("Accommodation with id: {} not found", reviewCreateDTO.getId_accommodation());
+                    return new ResourceNotFoundException("Accommodation with id: " + reviewCreateDTO.getId_accommodation() + " not found");
+                });
 
-        Booking booking = bookingRepository.findById(reviewCreateDTO.getId_booking()).orElseThrow(()->{
-            log.error("La reserva con id: {} no fue encontrada", reviewCreateDTO.getId_booking());
-            return new ResourceNotFoundException("La reserva con id: " + reviewCreateDTO.getId_booking() + " no fue encontrada");
-        });
+        Booking booking = bookingRepository.findById(reviewCreateDTO.getId_booking())
+                .orElseThrow(() -> {
+                    log.error("Booking with id: {} not found", reviewCreateDTO.getId_booking());
+                    return new ResourceNotFoundException("Booking with id: " + reviewCreateDTO.getId_booking() + " not found");
+                });
 
-        Review review = ReviewCreateMapper.INSTANCE.dtoToEntity(reviewCreateDTO);
-        review.setUser(user);
-        review.setReviewDate(LocalDateTime.now());
-        reviewRepository.save(review);
-        log.info("La review fue guardada: {}", review);
+        // 2. Create and save review
+        Review review = Review.builder()
+                .rating(reviewCreateDTO.getRating())
+                .comment(reviewCreateDTO.getComment())
+                .reviewDate(LocalDateTime.now())
+                .user(user)
+                .accommodation(accommodation)
+                .build();
 
-        booking.setReview(review);
+        Review savedReview = reviewRepository.save(review);
+        log.info("Review saved: {}", savedReview);
+
+        // 3. Update booking
+        booking.setReview(savedReview);
         booking.setReviewed(true);
         bookingRepository.save(booking);
-        log.info("La reserva fue actualizada: {}", booking);
+        log.info("Booking updated: {}", booking);
 
-        Double average = reviewRepository.findByAccommodationId(reviewCreateDTO.getId_accommodation())
+        // 4. Calculate and update average rating
+        Double average = reviewRepository.findByAccommodationId(accommodation.getId())
                 .stream()
                 .mapToDouble(Review::getRating)
                 .average()
                 .orElse(0.0);
 
-        log.info("Rating promedio: {}", average);
         accommodation.setAvgRating(average);
         accommodationRepository.save(accommodation);
+        log.info("Accommodation updated with average rating: {}", average);
 
-        log.info("Alojamiento actualizado: {}", accommodation);
-        return ReviewSummaryMapper.INSTANCE.entityToDto(review);
+        // 5. Return DTO
+        return ReviewSummaryMapper.INSTANCE.entityToDto(savedReview);
     }
+
 }

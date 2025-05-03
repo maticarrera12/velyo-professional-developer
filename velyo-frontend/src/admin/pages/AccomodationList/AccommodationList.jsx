@@ -54,7 +54,7 @@ export const AccommodationList = () => {
         <PaginateItems
           fetchData={getAccommodations}
           isLoading={isLoading}
-          data={accommodations?.data}
+          data={accommodations}
           totalPages={totalPages}
           deleteItem={deleteAccommodation}
           error={error}

@@ -29,5 +29,5 @@ public interface IAccommodationService {
 
     void delete(UUID id) throws ResourceNotFoundException, IOException;
 
-    Set<AccommodationSummaryDTO> findByCategoryAndCountryOrCity(Set<UUID> categoryIds, String searchTerm, LocalDate checkIn, LocalDate checkOut);
+    Set<AccommodationSummaryDTO> findByCategoryIdsAndCountryOrCity(Set<UUID> categoryIds, String searchTerm, LocalDate checkIn, LocalDate checkOut);
 }

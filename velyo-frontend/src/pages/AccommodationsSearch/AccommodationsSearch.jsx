@@ -5,69 +5,94 @@ import { useCategory } from "../../hooks/useCategory";
 import { useAccommodation } from "../../hooks/useAccommodation";
 import { useEffect, useState } from "react";
 import { useDebounce } from "@uidotdev/usehooks";
-import placesOptions from "../Home/options";
 import locale from "antd/es/date-picker/locale/es_ES";
 import dayjs from "dayjs";
 import { Popover } from "../../ui/Popover/Popover";
 import { AccommodationSkeleton } from "../../components/AccommodationSkeleton/AccommodationSkeleton";
 import { AccommodationCard } from "../../components/AccommodationCard/AccommodationCard";
+
 export const AccommodationsSearch = () => {
   const { RangePicker } = DatePicker;
-  const [query, setQuery] = useQueryParams({ checkIn: StringParam, checkOut: StringParam, place: StringParam, categories: ArrayParam });
+  const [query, setQuery] = useQueryParams({ 
+    checkIn: StringParam, 
+    checkOut: StringParam, 
+    place: StringParam, 
+    categories: ArrayParam 
+  });
+
+  // Estados para las opciones
+  const [categoryOptions, setCategoryOptions] = useState([]);
+  const [placeOptions, setPlaceOptions] = useState([]);
+  const [place, setPlace] = useState(query.place ? query.place : null);
+
+  const debouncedPlace = useDebounce(place, 500);
+
   const {
     categories,
     getAllCategories,
     isLoading: isLoadingCategories,
     error: errorCategories,
   } = useCategory();
+
   const {
     accommodations,
     searchAccommodations,
+    getAccommodations,
     isLoading: isLoadingAccommodations,
-    totalPages,
     error: errorAccommodations,
   } = useAccommodation();
-  const [options, setOptions] = useState([]);
-  const [optionsPlace, setOptionsPlace] = useState(placesOptions);
-  const [place, setPlace] = useState(query.place ? query.place : null);
-
-  const debouncedPlace = useDebounce(place, 500);
 
   useEffect(() => {
-    setQuery((prev) => {
-      return { ...prev };
-    });
+    setQuery((prev) => ({ ...prev }));
     getAllCategories();
   }, []);
 
+  // Configurar opciones de categorías
   useEffect(() => {
     if (categories) {
-      const options = categories?.map((category) => {
-        return {
-          label: category.name,
-          value: category.id,
-        };
-      });
-      setOptions(options);
+      const catOptions = categories.map((category) => ({
+        label: category.name,
+        value: category.id,
+      }));
+      setCategoryOptions(catOptions);
     }
   }, [categories]);
 
+  // Configurar opciones de lugares
+  useEffect(() => {
+    if (accommodations?.data?.length > 0) {
+      const uniquePlaces = new Map();
+
+      accommodations.data.forEach((acc) => {
+        const { city, country } = acc.address || {};
+        [city, country].forEach((place) => {
+          if (place) {
+            const normalized = place.trim().toLowerCase();
+            if (!uniquePlaces.has(normalized)) {
+              uniquePlaces.set(normalized, place.trim());
+            }
+          }
+        });
+      });
+
+      const placeOpts = Array.from(uniquePlaces.values())
+        .sort((a, b) => a.localeCompare(b))
+        .map((place) => ({ value: place }));
+
+      setPlaceOptions(placeOpts);
+    }
+  }, [accommodations]);
+
   const handleCategoriesChange = (values) => {
-    setQuery((prev) => {
-      return { ...prev, categories: values };
-    });
+    setQuery((prev) => ({ ...prev, categories: values }));
   };
 
   useEffect(() => {
     if (!debouncedPlace) {
-      setQuery((prev) => {
-        return { ...prev, place: undefined };
-      });
+      setQuery((prev) => ({ ...prev, place: undefined }));
       return;
     }
-    setQuery((prev) => {
-      return { ...prev, place: debouncedPlace };
-    });
+    setQuery((prev) => ({ ...prev, place: debouncedPlace }));
   }, [debouncedPlace]);
 
   const handlePlaceChange = (value) => {
@@ -76,14 +101,11 @@ export const AccommodationsSearch = () => {
 
   const handleDateRangeOnChange = (dateRange) => {
     if (!dateRange) {
-      setQuery((prev) => {
-        return { ...prev, checkIn: undefined, checkOut: undefined };
-      });
+      setQuery((prev) => ({ ...prev, checkIn: undefined, checkOut: undefined }));
       return;
     }
 
     const [start, end] = dateRange;
-
     setQuery((prev) => ({
       ...prev,
       checkIn: start.format("YYYY-MM-DD"),
@@ -92,13 +114,21 @@ export const AccommodationsSearch = () => {
   };
 
   useEffect(() => {
-    searchAccommodations(
-      query.categories,
-      query.place,
-      query.checkIn,
-      query.checkOut
-    );
+    const hasSearchParams = query.place || query.checkIn || query.checkOut || 
+                          (query.categories && query.categories.length > 0);
+    
+    if (!hasSearchParams) {
+      getAccommodations();
+    } else {
+      searchAccommodations(
+        query.categories,
+        query.place,
+        query.checkIn,
+        query.checkOut
+      );
+    }
   }, [query]);
+
   return (
     <main className="search-container">
       <section className="search-filters">
@@ -108,19 +138,17 @@ export const AccommodationsSearch = () => {
             <div>
               <label htmlFor="place">Destino</label>
               <AutoComplete
+                style={{ width: "100%" }}
                 id="place"
                 allowClear
-                className="form-element"
+                className="form-multiple-select"
                 onChange={handlePlaceChange}
-                options={optionsPlace}
+                options={placeOptions}
                 filterOption={(inputValue, option) =>
-                  option.value
-                    .toUpperCase()
-                    .indexOf(inputValue.toUpperCase()) !== -1
+                  option.value.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
                 }
                 placeholder="Seleccione un destino"
                 listHeight={128}
-                value={place}
               />
             </div>
             <div>
@@ -129,7 +157,7 @@ export const AccommodationsSearch = () => {
                 placeholder="Tipo de alojamiento"
                 id="categorias"
                 className="form-element"
-                options={options}
+                options={categoryOptions}
                 mode="multiple"
                 value={query.categories}
                 onChange={handleCategoriesChange}
@@ -166,7 +194,7 @@ export const AccommodationsSearch = () => {
                 placeholder="Tipo de alojamiento"
                 id="categorias"
                 className="form-element"
-                options={options}
+                options={categoryOptions}
                 mode="multiple"
                 value={query.categories}
                 onChange={handleCategoriesChange}

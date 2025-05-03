@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.util.Objects;
 import java.util.Set;
 import java.util.UUID;
 
@@ -27,4 +28,17 @@ public class AccommodationSummaryDTO implements Serializable {
     private AddressDTO address;
     private Double avgRating;
     private Integer totalReviews;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof AccommodationSummaryDTO that)) return false;
+        return id != null && id.equals(that.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 }
+

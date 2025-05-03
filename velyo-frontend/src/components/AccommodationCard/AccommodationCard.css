@@ -63,24 +63,26 @@
 
 .accommodation-card-price > strong{
     font-size: 1.2rem;
+    color: var(--color-primary-700);
+    font-weight: 900;
 }
 
 @media (width > 480px) {
     .accommodation-card-container {
       flex-direction: row;
-      display: flex; /* Asegurando que se dispongan en fila */
+      display: flex; 
     }
     .accommodation-card-container figure {
       flex-shrink: 0;
-      width: 40%; /* Ajustar el tamaño de la imagen para que ocupe menos espacio */
-      height: auto; /* Mantener la proporción de la imagen */
+      width: 40%; 
+      height: auto; 
     }
     .accommodation-card-info {
       display: flex;
       flex-direction: column;
       padding-block: .5rem;
       flex-grow: 1;
-      width: 60%; /* Asegurando que la información ocupe el resto del espacio */
+      width: 60%; 
     }
     .accommodation-card-price {
       flex-grow: 1;
