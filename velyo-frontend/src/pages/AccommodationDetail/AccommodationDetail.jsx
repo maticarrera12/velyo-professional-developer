@@ -13,6 +13,7 @@ import { differenceInDays } from "date-fns";
 import { useBooking } from "../../hooks/useBooking";
 import { AccommodationShare } from "../../components/AccommodationShare/AccommodationShare";
 import ImageFallback from "../../assets/images/image-fallback.jpg";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import dayjs from "dayjs";
 import {
   ArrowLeftOutlined,
@@ -30,6 +31,7 @@ import { ReactSVG } from "react-svg";
 import numeral from "numeral";
 import { ReviewCard } from "../../components/ReviewCard/ReviewCard";
 export const AccommodationDetail = () => {
+
   const { toaster } = useContext(NotificationContext);
   const [isLoadingFavorite, setIsLoadingFavorite] = useState(false);
   const { user, token, updateUser } = useAuth();
@@ -63,6 +65,7 @@ export const AccommodationDetail = () => {
     if (accommodation) {
       console.log("Accommodation cargada:", accommodation);
       console.log("Total Reviews:", accommodation.totalReviews);
+      
     }
   }, [accommodation]);
 
@@ -261,7 +264,7 @@ export const AccommodationDetail = () => {
           <header className="acc-detail-header">
             <button className="acc-detail-back" onClick={handleBackClick}>
               <ArrowLeftOutlined />
-              Vovler atras
+              Volver atras
             </button>
           </header>
           <Empty description="No se encontro el alojamientos" />
@@ -271,7 +274,7 @@ export const AccommodationDetail = () => {
           <header className="acc-detail-header">
             <button className="acc-detail-back" onClick={handleBackClick}>
               <ArrowLeftOutlined />
-              Vovler atras
+              Volver atras
             </button>
             <div className="acc-detail-header-info">
               <h1>{accommodation.name}</h1>
@@ -317,12 +320,13 @@ export const AccommodationDetail = () => {
             {images(accommodation?.images)}
             <button
               className="acc-gallery-button"
-              onDoubleClick={() => handleClickShowImages()}
+              onClick={() => handleClickShowImages()}
             >
               <CameraOutlined />
               Mostrar todas las fotos
             </button>
           </section>
+
 
           <section className="acc-detail-info">
             <div className="acc-detail-info-container">
@@ -349,7 +353,7 @@ export const AccommodationDetail = () => {
                     <li key={index}>
                       <ReactSVG
                         src={amenity.icon}
-                        className="amenity-container"
+                        className="amenity-icon"
                       />
                       <span>{amenity.name}</span>
                     </li>
@@ -417,7 +421,7 @@ export const AccommodationDetail = () => {
             <section className="acc-detail-reviews">
               <h2>
                 <StarFilled /> {numeral(accommodation.avgRating).format("0.0")}{" "}
-                • {accommodation.totalReviews}
+                • {accommodation.totalReviews} Reviews
               </h2>
               <div className="acc-detail-reviews-comments">
                 {
@@ -429,7 +433,7 @@ export const AccommodationDetail = () => {
                   ) : error? (
                   <Empty description="No se pudieron obtener las reviews"/>
                   ):(
-                    accommodation.review.map((review, index)=>(
+                    accommodation.reviews.map((review, index)=>(
                       <ReviewCard key={index} review={review}/>
                     ))
                   )
@@ -439,7 +443,7 @@ export const AccommodationDetail = () => {
             </section>
           )}
 
-          <dialog ref={dialogRef} className="dialog-gallry-dialog">
+          <dialog ref={dialogRef} className="dialog-gallery-dialog">
             <div className="dialog-gallery-container">
               <button
                 className="dialog-gallery-close"
@@ -458,15 +462,14 @@ export const AccommodationDetail = () => {
               <Carousel
                 showArrows={true}
                 infiniteLoop={true}
-                className="gallery-container"
-              >
+                className="gallery-container">
                 {accommodation?.images?.map((image, index) => (
                   <div key={index}>
-                    <img src={image} alt={accommodation.name} />
+                    <img src={image} alt={accommodation.name}/>
                   </div>
                 ))}
               </Carousel>
-            </div>
+              </div>
           </dialog>
           <Modal />
         </>

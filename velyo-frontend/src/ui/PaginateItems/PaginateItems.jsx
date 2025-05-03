@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { Link, useLocation } from "react-router-dom"
 import { ItemSkeleton } from "../ItemSkeleton/ItemSkeleton"
 import { Empty } from "antd"
 import { ItemList } from "../ItemList/ItemList"
@@ -13,8 +12,6 @@ export const PaginateItems = ({fetchData, isLoading, data, deleteItem, totalPage
     const [currentPage, setCurrentPage] = useState(1)
     const [showModal, setShowModal] = useState(false)
     const [deleteItemId, setDeleteItemId] = useState(null)
-    // const location = useLocation()
-    // console.log('DATA QUE LLEGA A PaginateItems:', data);
 
     useEffect(()=>{
         fetchData(currentPage - 1)

@@ -1,0 +1,324 @@
+.acc-detail-container{
+    padding-inline: 1rem;
+    width: 100%;
+    max-width: 900px;
+    margin-block: 1rem;
+    margin-inline: auto;
+}
+
+.acc-detail-back{
+    font-weight: 600;
+    color: var(--color-primary-700);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.acc-detail-back svg{
+    transition: transform .2s ease
+}
+.acc-detail-back:hover svg{
+    transform: translateX(-0.2rem);
+}
+
+.acc-detail-header ~ .acc-detail-gallery{
+    margin-top: .8rem;
+}
+
+.acc-detail-header-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.acc-detail-header-actions{
+    display: flex;
+    gap: 4px;
+}
+
+.acc-detail-gallery{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px 250px;
+    gap: .5rem;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 16px;
+    margin-top: .8rem;
+}
+.acc-detail-gallery > figure:first-child{
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+
+.right-grid{
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.acc-detail-gallery figure{
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.acc-detail-gallery img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.acc-detail-gallery figure:hover img{
+    transform: scale(1.05);
+}
+
+.acc-gallery-button{
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+@media (max-width: 768px){
+    .acc-detail-gallery{
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px;
+        height: 300px;
+    }
+    .acc-detail-gallery > figure:first-child{
+        grid-column: 1;
+        grid-row: 1;
+        display: block;
+        
+    }
+    .right-grid, .acc-detail-gallery figure:not(:first-child){
+        display: none !important;
+    } 
+
+    .acc-gallery-button{
+        bottom: 0.5rem;
+        left: .5rem;
+        padding: 0.3rem .8rem;
+        size: .9rem;
+    }
+}
+
+@media (width <= 768){
+    .acc-detail-gallery{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .acc-detail-gallery figure:nth-child(1){
+        grid-column: 0.5;
+        grid-row: 0.5;
+    }
+    .acc-detail-gallery  figure:nth-child(3), .acc-detail-gallery  figure:nth-child(4), .acc-detail-gallery  figure:nth-child(5) {
+        display: none;
+   }
+}
+.acc-detail-info{
+    position: relative;
+    margin-block-start: 1.6rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.acc-detail-info-container{
+    order: 1;
+}
+
+.acc-detail-info-container h2{
+    font-size: 1.2rem;
+    color: var(--color-base-700);
+}
+
+.acc-detail-description{
+    margin-block-start: .4rem;
+}
+
+.acc-detail-description > p:first-child{
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--color-primary-700);
+}
+.amenity-icon svg{
+    width: 32px;
+    height: 32px;
+}
+
+.acc-detail-booking{
+    align-self: flex-start;
+    order: 0;
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid var(--color-base-200);
+    background-color: #fff;
+    display: grid;
+    gap: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
+}
+
+.acc-detail-price-night > span{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary-700);
+}
+
+.acc-detail-price{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--color-base-0);
+    padding-top: 1rem;
+}
+
+.acc-detail-price > p{
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.acc-detail-booking .button{
+    text-align: center;
+    font-weight: 700;
+}
+
+.acc-detail-description-container{
+    display: grid;
+    gap: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .acc-detail-info {
+      grid-template-columns: 2fr 1fr;
+      gap: 1rem;
+    }
+  
+    .acc-detail-booking {
+      order: 1;
+      position: sticky;
+      top: 70px;
+    }
+  
+    .acc-detail-info-container {
+      order: 0;
+    }
+  }
+
+  .acc-detail-amenities h2{
+    font-size: 1.2rem;
+    color: var(--color-primary-700);
+  }
+
+  .acc-detail-amenities > ul{
+    margin-block-start: 0.8rem;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    list-style: none;
+  }
+
+  .acc-detail-amenities > ul li{
+    padding-block: 0.2rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: start;
+    font-weight: 600;
+    color: var(--color-base-700);
+  }
+
+  .acc-detail-reviews > h2{
+    font-size: 1.2rem;
+    color: var(--color-primary-700);
+  }
+
+  .acc-detail-reviews-comments{
+    margin-top: 1rem;
+    display: grid;
+    gap: 1rem;
+  }
+
+  @media (width > 768px){
+    .acc-detail-reviews-comments{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+  }
+
+  .dialog-gallery-dialog{
+    border: none;
+  }
+
+  .dialog-gallery-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    height: fit-content;
+    padding-block: 1rem;
+    padding-inline: 1rem;
+    background-color: var(--color-base-100);
+    box-shadow: 0 0 8px rgba(0, 0, 0, .5);
+    border-radius: 16px;
+  }
+
+  .dialog-gallery-close{
+    align-self: flex-end;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dialog-gallery-close svg{
+    transition: transform 0.2s ease, fill 0.2s ease;
+    fill: var(--color-base-700);
+  }
+
+  .dialog-gallery-close:hover svg{
+    transform: scale(1.2);
+    fill: var(--color-base-900);
+  }
+
+  .gallery-container{
+    width: 100%;
+  }
+
+  .gallery-container img{
+    aspect-ratio: 1.7777777778;
+    background-color: var(--color-base-400);
+    object-fit: contain;
+  }
+
+
+  

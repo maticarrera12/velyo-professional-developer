@@ -1,0 +1,108 @@
+.search-container{
+    margin-block-start: 2rem;
+    margin-inline: 1.2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.search-filters{
+    display: none;
+}
+
+
+.search-filters ~ .search-acc-container{
+    padding-block-start: .5rem;
+}
+
+.search-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-info > p {
+    font-weight: 600;
+}
+
+.search-info > button{
+    display: block;
+}
+
+.filters-button{
+    margin-bottom: 1rem;
+}
+.search-form-container{
+    display: grid;
+    gap: 1rem;
+}
+
+.search{
+    margin-top: 1rem;
+    display: grid;
+    gap: 1rem;
+}
+
+/* Contenedores de los inputs */
+.search-form-container > div {
+    width: 100%;
+  }
+  
+  /* AutoComplete (usa internamente antd Select) */
+  .search-form-container .ant-select {
+    width: 100% !important;
+  }
+  
+  .search-form-container .ant-select-selector {
+    width: 100% !important;
+  }
+  
+  /* Input del AutoComplete */
+  .search-form-container .ant-select input {
+    width: 100% !important;
+  }
+  
+  /* Select dentro del Popover */
+  .search-info .ant-select {
+    width: 100% !important;
+  }
+  
+  .search-info .ant-select-selector {
+    width: 100% !important;
+  }
+
+  @media screen and (min-width: 769px) {
+    .search-container {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .search-filters{
+        display: block;
+        border: 1px solid var(--color-primary-300);
+        border-radius: 1rem;
+        padding-block-end: 1rem;
+    }
+    .search-filters > p{
+        padding-block: 0.6rem;
+        padding-inline: 1rem;
+        border-bottom: 1px solid var(--color-base-300);
+        font-weight: 500;
+    }
+    .search-filters > form{
+        margin-top: 1rem;
+        padding-inline: 1rem;
+    }
+    .search-filters > form div > label{
+        display: block;
+        margin-bottom: .4rem;
+        font-weight: 500;
+    }
+
+    .search-filters > form div > form-element{
+        width: 100%;
+    }
+    .filters-button{
+        display: none !important;
+    }
+}

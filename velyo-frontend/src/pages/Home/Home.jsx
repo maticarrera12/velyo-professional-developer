@@ -76,6 +76,7 @@ const Home = () => {
         <form className="main-section-form" onSubmit={handleOnSubmmit}>
           <label htmlFor="place">
             <AutoComplete
+            style={{width:"100%"}}
               id="place"
               allowClear
               className="form-multiple-select"

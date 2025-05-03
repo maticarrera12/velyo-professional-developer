@@ -5,7 +5,6 @@ import App from './App.jsx'
 import { ConfigProvider } from 'antd'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
      <ConfigProvider
       theme={{
         components: {
@@ -20,5 +19,5 @@ createRoot(document.getElementById('root')).render(
     >
       <App />
       </ConfigProvider>  
-       </StrictMode>,
+  
 )

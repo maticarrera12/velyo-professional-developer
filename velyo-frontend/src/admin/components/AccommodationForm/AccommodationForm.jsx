@@ -467,7 +467,7 @@ export const AccommodationForm = ({ accommodation, onRefetch }) => {
           {formik.errors.images && formik.touched.images && (
             <label className="label-error">{formik.errors.images}</label>
           )}
-          <aside className="thumbsContainer">{thumbs}</aside>
+          <aside className="thumb-container">{thumbs}</aside>
         </div>
         <FormikProvider value={formik}>
           <FieldArray name="policies">

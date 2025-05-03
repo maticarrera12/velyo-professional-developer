@@ -9,10 +9,9 @@
 }
 .booking-card-figure {
     position: relative;
-    aspect-ratio: 1;
     width: 100%;
 }
-.booking-card-appreciation {
+.booking-card-avgRating {
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
@@ -53,7 +52,6 @@
 .booking-card-info {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
 }
 .booking-card-info-text {
     font-size: 0.9rem;
@@ -72,6 +70,10 @@
 .booking-card-confirm > .icon {
     font-size: 1rem;
     font-weight: 800;
+}
+.booking-card-info-text ~ .booking-card-info-text {
+    border-left: 1px solid var(--color-base-300);
+    padding-inline: 1rem;
 }
 @media (width > 768px) {
     .booking-card-container {
@@ -107,9 +109,7 @@
 .booking-card-info {
         flex-direction: row;
         flex-wrap: wrap;
+        gap: 1rem;
    }
-.booking-card-info-text ~ .booking-card-info-text {
-        border-left: 1px solid var(--color-base-300);
-        padding-inline: 1rem;
-   }
+
 }

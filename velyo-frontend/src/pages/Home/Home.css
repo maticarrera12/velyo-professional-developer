@@ -41,61 +41,58 @@
 }
 
 /* Estilo general para los inputs y el botón */
-.form-multiple-select,
-.form-date-range-picker {
+.main-section-form .form-multiple-select,
+.main-section-form .form-date-range-picker {
     border: none;
     background-color: transparent;
     padding: 0.5rem 0.75rem;
     font-size: 1rem;
     color: #222222;
-    flex: 1;
+    flex: 1 1 auto;
     min-width: 150px;
 }
 
-.form-multiple-select:focus,
-.form-date-range-picker:focus {
-    outline: none;
-}
-
-/* Estilo para el contenedor del AutoComplete */
-.form-multiple-select {
-    flex: 1;
-    min-width: 150px;
+/* Evita que se achique al escribir */
+.main-section-form .form-multiple-select {
     height: 100%;
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
-/* Estilo para el campo de entrada dentro del AutoComplete */
-.form-multiple-select .ant-select-selector {
+/* Estilo para el selector de Ant Design */
+.main-section-form .form-multiple-select .ant-select-selector {
     border: none !important;
     box-shadow: none !important;
     background-color: transparent;
-    height: 150px;
     display: flex;
     align-items: center;
     padding: 0.5rem 0.75rem;
     border-radius: 32px;
     transition: background-color 0.3s ease;
+    width: 100% !important;
+    min-width: 100% !important;
 }
 
-/* Efecto hover para el campo de entrada */
-.form-multiple-select .ant-select-selector:hover {
+/* Efecto hover */
+.main-section-form .form-multiple-select .ant-select-selector:hover {
     background-color: var(--color-base-200);
 }
 
-/* Estilo para el campo de entrada real */
-.form-multiple-select .ant-select-selection-search-input {
-    height: 150px;
+/* Input interno del AutoComplete */
+.main-section-form .form-multiple-select .ant-select-selection-search-input {
     padding: 0;
     background-color: transparent;
     border: none;
     outline: none;
     font-size: 1rem;
     color: #222222;
+    min-width: 50px;
+    width: 100%;
+    flex: 1;
 }
 
-/* Estilo para el botón de búsqueda */
+/* Botón */
 .main-section-form .button.button-base {
     background-color: var(--color-primary-700);
     color: #ffffff;
@@ -107,19 +104,13 @@
     justify-content: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-inline: 4px; /* Añadido para darle margen lateral */
+    margin-inline: 4px;
 }
 
-/* Estilos adicionales para las secciones */
-.home-recommendation-section {
-    margin-top: 5rem;
-}
+/* Secciones */
+.home-recommendation-section,
 .home-category-section {
     margin-top: 5rem;
-}
-
-.home-category-section,
-.home-recommendation-section {
     padding-inline: 1rem;
 }
 
@@ -129,8 +120,8 @@
 
 .recommendation-section-container {
     display: grid;
-    grid-template-columns: 1fr; /* Una card por fila en pantallas chicas */
-    gap: .5rem;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
     padding-block: 1rem;
 }
 
@@ -143,7 +134,7 @@
     max-width: calc(100dvw - 64px);
 }
 
-/* Media Query para pantallas mayores de 480px */
+/* Responsive */
 @media (width > 480px) {
     .recommendation-section-container {
         grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
@@ -154,26 +145,24 @@
     }
 }
 
-/* Media Query para pantallas mayores de 768px */
 @media (width > 768px) {
     .recommendation-section-container {
-        grid-template-columns: repeat(2, 1fr); /* Exactamente 2 columnas */
-      }
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     .home-main-section > h1 {
         text-align: center;
     }
 }
 
-/* Media Query para pantallas menores de 480px */
 @media (max-width: 480px) {
     .main-section-form {
         flex-direction: column;
         align-items: stretch;
     }
 
-    .form-multiple-select,
-    .form-date-range-picker {
+    .main-section-form .form-multiple-select,
+    .main-section-form .form-date-range-picker {
         width: 100%;
     }
 
@@ -182,24 +171,24 @@
     }
 }
 
-/* Media Query para pantallas menores de 768px */
 @media (max-width: 768px) {
     .main-section-form {
-        flex-direction: column; /* Cambia a una columna */
-        align-items: stretch; /* Que ocupe todo el ancho */
+        flex-direction: column;
+        align-items: stretch;
         border-radius: 24px;
     }
 
-    .form-multiple-select,
-    .form-date-range-picker,
+    .main-section-form .form-multiple-select,
+    .main-section-form .form-date-range-picker,
     .button.button-base {
-        width: 100%; /* Que ocupen todo el ancho disponible */
+        width: 100%;
         min-width: 100%;
     }
+
     .main-section-form .button.button-base {
-        display: block; /* Cambiar display a block o el valor que prefieras */
+        display: block;
         margin-bottom: 8px;
         margin-inline: 0px;
     }
-       
+    
 }
