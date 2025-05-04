@@ -24,7 +24,7 @@ public interface AccommodationSummaryMapper {
     AccommodationSummaryDTO entityToDto(Accommodation accommodation);
 
     @Named("accommodationImagesToStrings")
-    default Set<String> stayImagesToStrings(Set<AccommodationImage> accommodationImages){
+    default Set<String>stayImagesToStrings(Set<AccommodationImage> accommodationImages){
         return accommodationImages.stream()
                 .map(AccommodationImage::getUrl)
                 .collect(Collectors.toSet());

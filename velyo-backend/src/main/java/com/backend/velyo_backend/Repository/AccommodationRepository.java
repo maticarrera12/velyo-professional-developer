@@ -42,9 +42,9 @@ Set<Accommodation> findByCategoryAndCountryOrCityContainingIgnoreCase(
     @Query("""
             SELECT a FROM accommodations a
             JOIN a.amenities am
-            WHERE am.id IN :featureIds
+            WHERE am.id IN :amenityIds
             """)
-    Set<Accommodation> findByAmenityIds(@Param("featureIds") Set<UUID> amenityIds);
+    Set<Accommodation> findByAmenityIds(@Param("amenityIds") Set<UUID> amenityIds);
 
 
     @Query(value = "SELECT * FROM accommodations ORDER BY RAND() LIMIT :size", nativeQuery = true)

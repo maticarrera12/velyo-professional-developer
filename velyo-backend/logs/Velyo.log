@@ -1,0 +1,97 @@
+2025-05-04 17:45:27.779 INFO  [main] c.b.v.VelyoBackendApplication - Starting VelyoBackendApplication using Java 24.0.1 with PID 8908 (C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend\target\classes started by Mati in C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend)
+2025-05-04 17:45:27.793 INFO  [main] c.b.v.VelyoBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-04 17:45:29.577 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-4040"]
+2025-05-04 17:45:29.579 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2025-05-04 17:45:29.580 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-04 17:45:29.641 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 17:45:36.602 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-4040"]
+2025-05-04 17:45:36.636 INFO  [main] c.b.v.VelyoBackendApplication - Started VelyoBackendApplication in 9.205 seconds (process running for 13.787)
+2025-05-04 17:45:54.384 INFO  [http-nio-4040-exec-2] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-04 17:45:54.604 INFO  [http-nio-4040-exec-1] c.b.v.C.CategoryController - Devolviendo 10 categorias
+2025-05-04 17:45:54.694 INFO  [http-nio-4040-exec-4] c.b.v.C.CategoryController - Devolviendo imagen: en-las-alturas.svg
+2025-05-04 17:45:54.694 INFO  [http-nio-4040-exec-6] c.b.v.C.CategoryController - Devolviendo imagen: casas-rodantes.svg
+2025-05-04 17:45:54.694 INFO  [http-nio-4040-exec-7] c.b.v.C.CategoryController - Devolviendo imagen: casa-arbol.svg
+2025-05-04 17:45:54.694 INFO  [http-nio-4040-exec-9] c.b.v.C.CategoryController - Devolviendo imagen: bed&breakfast.svg
+2025-05-04 17:45:54.694 INFO  [http-nio-4040-exec-5] c.b.v.C.CategoryController - Devolviendo imagen: camping.svg
+2025-05-04 17:45:54.694 INFO  [http-nio-4040-exec-8] c.b.v.C.CategoryController - Devolviendo imagen: casa-campo.svg
+2025-05-04 17:45:54.719 INFO  [http-nio-4040-exec-2] c.b.v.C.CategoryController - Devolviendo imagen: modern-house.svg
+2025-05-04 17:45:54.719 INFO  [http-nio-4040-exec-10] c.b.v.C.CategoryController - Devolviendo imagen: cabana.svg
+2025-05-04 17:45:54.719 INFO  [http-nio-4040-exec-3] c.b.v.C.CategoryController - Devolviendo imagen: playa.svg
+2025-05-04 17:45:54.719 INFO  [http-nio-4040-exec-1] c.b.v.C.CategoryController - Devolviendo imagen: habitaciones.svg
+2025-05-04 17:48:22.224 INFO  [main] c.b.v.VelyoBackendApplication - Starting VelyoBackendApplication using Java 24.0.1 with PID 22788 (C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend\target\classes started by Mati in C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend)
+2025-05-04 17:48:22.233 INFO  [main] c.b.v.VelyoBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-04 17:48:23.783 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-4040"]
+2025-05-04 17:48:23.785 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2025-05-04 17:48:23.785 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-04 17:48:23.845 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 17:48:29.671 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-4040"]
+2025-05-04 17:48:29.696 INFO  [main] c.b.v.VelyoBackendApplication - Started VelyoBackendApplication in 7.764 seconds (process running for 8.542)
+2025-05-04 17:48:36.314 INFO  [http-nio-4040-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-04 17:53:11.753 INFO  [main] c.b.v.VelyoBackendApplication - Starting VelyoBackendApplication using Java 24.0.1 with PID 23896 (C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend\target\classes started by Mati in C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend)
+2025-05-04 17:53:11.762 INFO  [main] c.b.v.VelyoBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-04 17:53:13.342 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-4040"]
+2025-05-04 17:53:13.344 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2025-05-04 17:53:13.345 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-04 17:53:13.405 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 17:53:19.267 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-4040"]
+2025-05-04 17:53:19.292 INFO  [main] c.b.v.VelyoBackendApplication - Started VelyoBackendApplication in 7.844 seconds (process running for 8.625)
+2025-05-04 17:55:07.719 INFO  [main] c.b.v.VelyoBackendApplication - Starting VelyoBackendApplication using Java 24.0.1 with PID 6640 (C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend\target\classes started by Mati in C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend)
+2025-05-04 17:55:07.728 INFO  [main] c.b.v.VelyoBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-04 17:55:09.250 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-4040"]
+2025-05-04 17:55:09.253 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2025-05-04 17:55:09.253 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-04 17:55:09.315 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 17:55:14.956 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-4040"]
+2025-05-04 17:55:14.979 INFO  [main] c.b.v.VelyoBackendApplication - Started VelyoBackendApplication in 7.581 seconds (process running for 8.39)
+2025-05-04 17:55:19.536 INFO  [http-nio-4040-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-04 18:55:06.458 INFO  [main] c.b.v.VelyoBackendApplication - Starting VelyoBackendApplication using Java 24.0.1 with PID 35508 (C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend\target\classes started by Mati in C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend)
+2025-05-04 18:55:06.466 INFO  [main] c.b.v.VelyoBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-04 18:55:07.973 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-4040"]
+2025-05-04 18:55:07.977 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2025-05-04 18:55:07.978 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-04 18:55:08.038 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 18:55:13.663 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-4040"]
+2025-05-04 18:55:13.687 INFO  [main] c.b.v.VelyoBackendApplication - Started VelyoBackendApplication in 7.521 seconds (process running for 8.301)
+2025-05-04 18:55:18.712 INFO  [main] c.b.v.VelyoBackendApplication - Starting VelyoBackendApplication using Java 24.0.1 with PID 19216 (C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend\target\classes started by Mati in C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend)
+2025-05-04 18:55:18.721 INFO  [main] c.b.v.VelyoBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-04 18:55:20.283 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-4040"]
+2025-05-04 18:55:20.284 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2025-05-04 18:55:20.285 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-04 18:55:20.343 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 18:55:24.895 INFO  [main] o.a.c.c.StandardService - Stopping service [Tomcat]
+2025-05-04 18:55:53.235 INFO  [main] c.b.v.VelyoBackendApplication - Starting VelyoBackendApplication using Java 24.0.1 with PID 36688 (C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend\target\classes started by Mati in C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend)
+2025-05-04 18:55:53.244 INFO  [main] c.b.v.VelyoBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-04 18:55:54.740 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-4040"]
+2025-05-04 18:55:54.742 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2025-05-04 18:55:54.742 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-04 18:55:54.798 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 18:56:00.616 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-4040"]
+2025-05-04 18:56:00.642 INFO  [main] c.b.v.VelyoBackendApplication - Started VelyoBackendApplication in 7.699 seconds (process running for 8.466)
+2025-05-04 18:56:16.955 INFO  [main] c.b.v.VelyoBackendApplication - Starting VelyoBackendApplication using Java 24.0.1 with PID 6876 (C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend\target\classes started by Mati in C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend)
+2025-05-04 18:56:16.965 INFO  [main] c.b.v.VelyoBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-04 18:56:18.490 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-4040"]
+2025-05-04 18:56:18.492 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2025-05-04 18:56:18.492 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-04 18:56:18.549 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 18:56:24.326 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-4040"]
+2025-05-04 18:56:24.354 INFO  [main] c.b.v.VelyoBackendApplication - Started VelyoBackendApplication in 7.692 seconds (process running for 8.466)
+2025-05-04 19:09:13.310 INFO  [main] c.b.v.VelyoBackendApplication - Starting VelyoBackendApplication using Java 22.0.2 with PID 13200 (C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend\target\classes started by Mati in C:\Users\Mati\Desktop\Velyo-professional-developer\velyo_backend)
+2025-05-04 19:09:13.318 INFO  [main] c.b.v.VelyoBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-04 19:09:14.406 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-4040"]
+2025-05-04 19:09:14.408 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2025-05-04 19:09:14.408 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-04 19:09:14.456 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 19:09:20.495 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-4040"]
+2025-05-04 19:09:20.521 INFO  [main] c.b.v.VelyoBackendApplication - Started VelyoBackendApplication in 7.526 seconds (process running for 8.164)
+2025-05-04 19:09:41.322 INFO  [http-nio-4040-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-04 19:09:41.553 INFO  [http-nio-4040-exec-3] c.b.v.C.CategoryController - Devolviendo 10 categorias
+2025-05-04 19:09:41.658 INFO  [http-nio-4040-exec-8] c.b.v.C.CategoryController - Devolviendo imagen: casa-campo.svg
+2025-05-04 19:09:41.658 INFO  [http-nio-4040-exec-4] c.b.v.C.CategoryController - Devolviendo imagen: en-las-alturas.svg
+2025-05-04 19:09:41.658 INFO  [http-nio-4040-exec-6] c.b.v.C.CategoryController - Devolviendo imagen: casas-rodantes.svg
+2025-05-04 19:09:41.658 INFO  [http-nio-4040-exec-9] c.b.v.C.CategoryController - Devolviendo imagen: bed&breakfast.svg
+2025-05-04 19:09:41.658 INFO  [http-nio-4040-exec-7] c.b.v.C.CategoryController - Devolviendo imagen: casa-arbol.svg
+2025-05-04 19:09:41.658 INFO  [http-nio-4040-exec-5] c.b.v.C.CategoryController - Devolviendo imagen: camping.svg
+2025-05-04 19:09:41.673 INFO  [http-nio-4040-exec-1] c.b.v.C.CategoryController - Devolviendo imagen: modern-house.svg
+2025-05-04 19:09:41.673 INFO  [http-nio-4040-exec-2] c.b.v.C.CategoryController - Devolviendo imagen: playa.svg
+2025-05-04 19:09:41.673 INFO  [http-nio-4040-exec-10] c.b.v.C.CategoryController - Devolviendo imagen: cabana.svg
+2025-05-04 19:09:41.673 INFO  [http-nio-4040-exec-3] c.b.v.C.CategoryController - Devolviendo imagen: habitaciones.svg

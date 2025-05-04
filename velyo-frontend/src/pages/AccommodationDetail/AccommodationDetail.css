@@ -165,8 +165,8 @@
     color: var(--color-primary-700);
 }
 .amenity-icon svg{
-    width: 48px;
-    height: 48px;
+    width: 32px;
+    height: 32px;
 }
 .acc-detail-amenities ul li span{
     font-weight: 700;

@@ -42,7 +42,7 @@ public class AmenityController {
     }
 
     @GetMapping
-    public ResponseEntity<ApiPageResponse<List<AmenityDTO>>> getAllfeatures(@RequestParam(value = "page", defaultValue = "0") int page,
+    public ResponseEntity<ApiPageResponse<List<AmenityDTO>>> getAllamenities(@RequestParam(value = "page", defaultValue = "0") int page,
                                                                             @RequestParam(value = "size", defaultValue = "10") int size){
         log.debug("Recibida la solicitud para obtener todas las amenities");
         Pageable pageable = PageRequest.of(page,size);
