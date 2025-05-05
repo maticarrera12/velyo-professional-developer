@@ -117,4 +117,4 @@ SECRET_KEY=clave_secreta_para_jwt
 ```
 
 ## 🛠️ Stack
-[![My Skills](https://skillicons.dev/icons?i=html,css,js,react,java,spring,mysql,maven,hibernate,postman,materialui,ps,ai,vite,figma,git)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,react,java,spring,mysql,maven,hibernate,postman,materialui,ps,ai,figma,git)](https://skillicons.dev)
