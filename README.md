@@ -1,4 +1,4 @@
-<h1 align="center">🏨 Velyo</h1> 
+ <h1 align="center">🏨 Velyo</h1> 
 
 <p align="center">Velyo es una plataforma web para la reserva de alojamientos, diseñada para ofrecer una experiencia simple, rápida e intuitiva. Permite a los usuarios buscar hospedajes por categoría y destino, ver detalles, hacer reservas y gestionar sus favoritos.</p>
 
@@ -106,7 +106,7 @@ mvn spring-boot:run
   - 👤 **Usuario registrado**
     - Email: `carreramatias12@gmail.com`
     - Contraseña: `12345678`
-- Vas a neccesitar un archivo .env en la carpeta resources o en la raiz del backend, con el siguiente formato
+- Vas a neccesitar un archivo .env en la carpeta resources o en la raiz del backend, con el siguiente formato:
 ```bash
 DATABASE_USER=tu_usuario
 DATABASE_PASSWORD=tu_contraseña
@@ -115,3 +115,6 @@ MAIL_USERNAME=tu_mail@gmail.com
 MAIL_PASSWORD=contraseña_app
 SECRET_KEY=clave_secreta_para_jwt
 ```
+
+## 🛠️ Stack
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,react,java,spring,mysql,maven,hibernate,postman,materialui,ps,ai,vite,figma,git)](https://skillicons.dev)
