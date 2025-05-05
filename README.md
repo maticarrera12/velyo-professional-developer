@@ -78,7 +78,7 @@ yarn run dev
 ### Backend
 1. Dirigite al directorio del backend:
 ```bash
-# Si estas en la carpteta del frontend
+# Si estas en la carpeta del frontend
 cd ..
 cd velyo-backend
 ```
