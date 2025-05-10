@@ -28,7 +28,6 @@ export const AccommodationCard = ({ accommodation }) => {
         duration: 3,
       });
     } catch (error) {
-      console.log("Error al añadir a favoritos:", error);
       toaster["error"]({
         message: "Error al añadir a favoritos.",
         description: error.message,

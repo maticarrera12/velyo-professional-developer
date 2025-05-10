@@ -61,12 +61,6 @@ export const AccommodationDetail = () => {
     getAccommodation(id);
   }, []);
 
-  useEffect(() => {
-    if (accommodation) {
-      console.log("Accommodation cargada:", accommodation);
-      console.log("Total Reviews:", accommodation.totalReviews);
-    }
-  }, [accommodation]);
     if (isLoadingAccommodation) {
     return <Skeleton active />;
   }
@@ -75,7 +69,6 @@ export const AccommodationDetail = () => {
     return <Empty description="No se pudo cargar el alojamiento" />;
   }
 
-  // Now we can safely access accommodation properties
   const fullAddress = `${accommodation.address.street}, ${accommodation.address.city}, ${accommodation.address.country}`;
   const handleClickShowImages = () => {
     dialogRef.current.showModal();

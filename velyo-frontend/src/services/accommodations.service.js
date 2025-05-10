@@ -103,7 +103,6 @@ const accommodationService = {
       });
   },
   editAccommodation: async (data, token) => {
-    console.log("amenities:", data.amenities);
     const formData = new FormData();
     const accommodation = {
       id: data.id,
@@ -142,7 +141,6 @@ const accommodationService = {
         return response.data;
       })
       .catch((error) => {
-        console.log(error);
         throw new Error(
           "No se pudo editar el alojamiento. Por favor, intente nuevamente."
         );

@@ -170,7 +170,6 @@ export const useAccommodation = () => {
     try {
       setIsLoading(true);
       const response = await accommodationService.getAccommodations(page, size, token);
-      console.log("📦 getAccommodations response:", response);
       setAccommodations(response.data); // Asegurate que esto sea el array correcto
       setTotalPages(response.totalPages);
       setError(false);

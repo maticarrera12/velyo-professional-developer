@@ -19,7 +19,6 @@ export const useCategory = () =>{
             setTotalPages(response.totalPages);
             setError(false)
         }catch{
-            console.log("Error fetching categories");
             setError(true)
         }finally{
             setIsLoading(false)
