@@ -31,7 +31,6 @@ import { ReactSVG } from "react-svg";
 import numeral from "numeral";
 import { ReviewCard } from "../../components/ReviewCard/ReviewCard";
 export const AccommodationDetail = () => {
-
   const { toaster } = useContext(NotificationContext);
   const [isLoadingFavorite, setIsLoadingFavorite] = useState(false);
   const { user, token, updateUser } = useAuth();
@@ -54,6 +53,7 @@ export const AccommodationDetail = () => {
   const dialogRef = useRef(null);
   const navigate = useNavigate();
 
+
   const handleBackClick = () => {
     navigate(-1);
   };
@@ -65,10 +65,18 @@ export const AccommodationDetail = () => {
     if (accommodation) {
       console.log("Accommodation cargada:", accommodation);
       console.log("Total Reviews:", accommodation.totalReviews);
-      
     }
   }, [accommodation]);
+    if (isLoadingAccommodation) {
+    return <Skeleton active />;
+  }
 
+  if (error || !accommodation) {
+    return <Empty description="No se pudo cargar el alojamiento" />;
+  }
+
+  // Now we can safely access accommodation properties
+  const fullAddress = `${accommodation.address.street}, ${accommodation.address.city}, ${accommodation.address.country}`;
   const handleClickShowImages = () => {
     dialogRef.current.showModal();
   };
@@ -327,7 +335,6 @@ export const AccommodationDetail = () => {
             </button>
           </section>
 
-
           <section className="acc-detail-info">
             <div className="acc-detail-info-container">
               <section>
@@ -351,10 +358,7 @@ export const AccommodationDetail = () => {
                 <ul>
                   {accommodation?.amenities?.map((amenity, index) => (
                     <li key={index}>
-                      <ReactSVG
-                        src={amenity.icon}
-                        className="amenity-icon"
-                      />
+                      <ReactSVG src={amenity.icon} className="amenity-icon" />
                       <span>{amenity.name}</span>
                     </li>
                   ))}
@@ -424,24 +428,37 @@ export const AccommodationDetail = () => {
                 • {accommodation.totalReviews} Reviews
               </h2>
               <div className="acc-detail-reviews-comments">
-                {
-                  isLoadingAccommodation ?(
-                    <Skeleton
+                {isLoadingAccommodation ? (
+                  <Skeleton
                     active
                     title={{ style: { height: "16px" } }}
-                    paragraph={{ rows: 0 }}/>
-                  ) : error? (
-                  <Empty description="No se pudieron obtener las reviews"/>
-                  ):(
-                    accommodation.reviews.map((review, index)=>(
-                      <ReviewCard key={index} review={review}/>
-                    ))
-                  )
-
-                }
+                    paragraph={{ rows: 0 }}
+                  />
+                ) : error ? (
+                  <Empty description="No se pudieron obtener las reviews" />
+                ) : (
+                  accommodation.reviews.map((review, index) => (
+                    <ReviewCard key={index} review={review} />
+                  ))
+                )}
               </div>
             </section>
+
           )}
+
+          <hr className="separator"/>
+          <section>
+            <iframe
+              width="100%"
+              height="300"
+              style={{ border: 0, borderRadius: "12px" }}
+              loading="lazy"
+              allowFullScreen
+              src={`https://www.google.com/maps?q=${encodeURIComponent(
+                fullAddress
+              )}&output=embed`}
+            />
+          </section>
 
           <dialog ref={dialogRef} className="dialog-gallery-dialog">
             <div className="dialog-gallery-container">
@@ -462,14 +479,15 @@ export const AccommodationDetail = () => {
               <Carousel
                 showArrows={true}
                 infiniteLoop={true}
-                className="gallery-container">
+                className="gallery-container"
+              >
                 {accommodation?.images?.map((image, index) => (
                   <div key={index}>
-                    <img src={image} alt={accommodation.name}/>
+                    <img src={image} alt={accommodation.name} />
                   </div>
                 ))}
               </Carousel>
-              </div>
+            </div>
           </dialog>
           <Modal />
         </>
