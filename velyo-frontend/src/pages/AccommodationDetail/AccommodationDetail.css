@@ -6,6 +6,7 @@
     margin-inline: auto;
 }
 
+
 .acc-detail-back{
     font-weight: 600;
     color: var(--color-primary-700);
@@ -15,6 +16,7 @@
     display: flex;
     align-items: center;
     gap: 0.3rem;
+    margin-left: auto;
 }
 
 .acc-detail-back svg{
